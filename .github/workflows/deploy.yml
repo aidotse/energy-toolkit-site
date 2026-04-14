@@ -11,6 +11,10 @@ permissions:
 
 env:
   AWS_REGION: eu-central-1
+  # Run Node 20 JS actions on the runner's Node 24 runtime. Silences the
+  # deprecation warning for actions/checkout@v4, actions/setup-node@v4,
+  # aws-actions/configure-aws-credentials@v4 until they ship Node 24 majors.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
