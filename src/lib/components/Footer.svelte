@@ -12,8 +12,8 @@
 				<ul class="space-y-2 text-sm">
 					<li><a href="/tools/demand" class="hover:text-white transition-colors">Demand</a></li>
 					<li><a href="/tools/generation" class="hover:text-white transition-colors">Generation</a></li>
-					<li><a href="/docs" class="hover:text-white transition-colors">Documentation</a></li>
 					<li><a href="/getting-started" class="hover:text-white transition-colors">Getting Started</a></li>
+					<li><a href="/projects" class="hover:text-white transition-colors">Projects</a></li>
 				</ul>
 			</div>
 			<div>

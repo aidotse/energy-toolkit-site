@@ -145,7 +145,7 @@ cd explorer && npm run dev</code></pre>
 					<p class="text-text-dark/80">
 						The included infrastructure scripts deploy to AWS with GitHub Actions and OIDC authentication.
 						Frontend goes to S3 + CloudFront (~$1/mo), API to App Runner (~$25/mo).
-						See the <a href="/docs/demand" class="text-link hover:underline">deployment documentation</a> for details.
+						See the <a href="/tools/demand#deploy" class="text-link hover:underline">deployment section on the Demand page</a> for details.
 					</p>
 				</div>
 			</section>
