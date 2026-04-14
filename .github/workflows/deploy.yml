@@ -43,7 +43,8 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          # Long cache for hashed assets (everything except HTML/JSON/XML/TXT)
+          # Pass 1: long cache for hashed assets. --delete scoped to non-HTML
+          # files by the exclude list.
           aws s3 sync build/ s3://${{ vars.S3_BUCKET }}/ \
             --delete \
             --cache-control "max-age=31536000,public" \
@@ -52,9 +53,13 @@ jobs:
             --exclude "*.xml" \
             --exclude "*.txt"
 
-          # Short cache for HTML and other content that may change between builds
+          # Pass 2: short cache for HTML/JSON/XML/TXT with --delete, scoped to
+          # those extensions via include/exclude so stale routes from previous
+          # deploys are removed.
           aws s3 sync build/ s3://${{ vars.S3_BUCKET }}/ \
+            --delete \
             --cache-control "max-age=3600,public" \
+            --exclude "*" \
             --include "*.html" \
             --include "*.json" \
             --include "*.xml" \
