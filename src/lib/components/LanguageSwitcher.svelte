@@ -18,12 +18,21 @@
 	});
 </script>
 
+<!--
+	data-sveltekit-reload forces a full page navigation (not a client-side
+	transition). Necessary because Paraglide's runtime language tag is set
+	server-side in hooks.server.ts; a SvelteKit client navigation changes
+	the URL but doesn't re-run the handle hook, so the locale would not
+	flip. A full reload fetches the prerendered page for the target locale
+	with the correct lang baked in.
+-->
 <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider">
 	<a
 		href={canonicalPath}
 		class={currentLang === 'en' ? 'text-brand-gold' : 'text-white/70 hover:text-white'}
 		aria-current={currentLang === 'en' ? 'page' : undefined}
 		hreflang="en"
+		data-sveltekit-reload
 	>
 		EN
 	</a>
@@ -33,6 +42,7 @@
 		class={currentLang === 'sv' ? 'text-brand-gold' : 'text-white/70 hover:text-white'}
 		aria-current={currentLang === 'sv' ? 'page' : undefined}
 		hreflang="sv"
+		data-sveltekit-reload
 	>
 		SV
 	</a>
