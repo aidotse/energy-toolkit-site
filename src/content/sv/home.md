@@ -10,22 +10,22 @@
 	<div class="max-w-3xl">
 		<div class="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-gold/10 px-4 py-1.5 text-sm text-brand-gold">
 			<Zap size={14} />
-			Open Source
+			Öppen källkod
 		</div>
 		<h1 class="mb-6 text-4xl font-bold leading-tight md:text-6xl">
-			Open-source tools for energy forecasting
+			Öppen källkod för energiprognoser
 		</h1>
 		<p class="mb-8 text-lg leading-relaxed text-white/70 md:text-xl">
-			Energy Toolkit is a collection of open-source tools for creating, sharing, and
-			visualizing energy forecasts. Each tool follows the same design philosophy:
-			a generator, an API, and an interactive frontend.
+			Energy Toolkit är en samling verktyg med öppen källkod för att skapa, dela och
+			visualisera energiprognoser. Varje verktyg följer samma designfilosofi:
+			en generator, ett API och en interaktiv frontend.
 		</p>
 		<div class="flex flex-wrap gap-4">
 			<Button href="/tools" variant="secondary">
-				Explore the tools <ArrowRight size={16} />
+				Utforska verktygen <ArrowRight size={16} />
 			</Button>
 			<Button href="/projects" variant="ghost">
-				<span class="text-white">View live projects</span>
+				<span class="text-white">Se live-projekt</span>
 			</Button>
 		</div>
 	</div>
@@ -34,23 +34,23 @@
 <!-- Two tools -->
 <PageSection>
 	<div class="mb-12 text-center">
-		<h2 class="mb-4 text-3xl font-bold text-brand-navy">Two tools, one philosophy</h2>
+		<h2 class="mb-4 text-3xl font-bold text-brand-navy">Två verktyg, en filosofi</h2>
 		<p class="mx-auto max-w-2xl text-text-dark/70">
-			Each tool is a full-stack application built around the same pattern:
-			a Python generator creates scenario data, an API serves it, and a web frontend lets you explore it.
+			Varje verktyg är en full-stack-applikation byggd kring samma mönster:
+			en Python-generator skapar scenariodata, ett API serverar den, och en webbfrontend låter dig utforska den.
 		</p>
 	</div>
 	<div class="grid gap-6 md:grid-cols-2">
 		<FeatureCard
 			icon="⚡"
 			title="Demand"
-			description="Forecast future electricity demand. Generate scenario-based demand projections from historical data, serve them through a REST API, and explore them with interactive charts and maps."
+			description="Prognostisera framtida elbehov. Generera scenariebaserade efterfrågeprognoser från historiska data, servera dem genom ett REST-API, och utforska dem med interaktiva diagram och kartor."
 			href="/tools/demand"
 		/>
 		<FeatureCard
 			icon="🌱"
 			title="Generation"
-			description="Plan renewable capacity. Use PyPSA power system optimization to determine what needs to be built to meet future demand, with weather-informed modeling and scenario exploration."
+			description="Planera förnybar kapacitet. Använd PyPSA-optimering av kraftsystem för att bestämma vad som behöver byggas för att möta framtida behov, med väderinformerad modellering och scenarioutforskning."
 			href="/tools/generation"
 		/>
 	</div>
@@ -59,9 +59,9 @@
 <!-- Shared architecture -->
 <PageSection bg="bg-white">
 	<div class="mb-12 text-center">
-		<h2 class="mb-4 text-3xl font-bold text-brand-navy">Shared design philosophy</h2>
+		<h2 class="mb-4 text-3xl font-bold text-brand-navy">Gemensam designfilosofi</h2>
 		<p class="mx-auto max-w-2xl text-text-dark/70">
-			Both tools follow the same architecture. Fork, plug in your data, and deploy.
+			Båda verktygen följer samma arkitektur. Forka, plugga in dina data, och driftsätt.
 		</p>
 	</div>
 	<div class="mx-auto max-w-3xl space-y-8">
@@ -69,21 +69,21 @@
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">1</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">Generator</h3>
-				<p class="text-sm text-text-dark/70">A Python engine that creates scenario-based forecast data. Define your models, run the generator, get structured output ready for serving.</p>
+				<p class="text-sm text-text-dark/70">En Python-motor som skapar scenariebaserad prognosdata. Definiera dina modeller, kör generatorn, få strukturerad output redo att serveras.</p>
 			</div>
 		</div>
 		<div class="flex gap-4">
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">2</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">API</h3>
-				<p class="text-sm text-text-dark/70">A standardized API that serves generated data. Static endpoints for metadata, dynamic queries for time series — fast and flexible.</p>
+				<p class="text-sm text-text-dark/70">Ett standardiserat API som serverar genererad data. Statiska endpoints för metadata, dynamiska frågor för tidsserier — snabbt och flexibelt.</p>
 			</div>
 		</div>
 		<div class="flex gap-4">
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">3</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">Frontend</h3>
-				<p class="text-sm text-text-dark/70">An interactive web application for exploring the data. Charts, maps, scenario comparison, and export — designed for multiple audiences.</p>
+				<p class="text-sm text-text-dark/70">En interaktiv webbapplikation för att utforska data. Diagram, kartor, scenariojämförelse och export — designad för flera målgrupper.</p>
 			</div>
 		</div>
 	</div>
@@ -92,16 +92,16 @@
 <!-- CTA -->
 <PageSection>
 	<div class="text-center">
-		<h2 class="mb-4 text-3xl font-bold text-brand-navy">See it in action</h2>
+		<h2 class="mb-4 text-3xl font-bold text-brand-navy">Se det i praktiken</h2>
 		<p class="mx-auto mb-8 max-w-xl text-text-dark/70">
-			Both tools have live reference projects you can explore right now.
+			Båda verktygen har live-referensprojekt som du kan utforska direkt.
 		</p>
 		<div class="flex flex-wrap justify-center gap-4">
 			<Button href="/projects" variant="primary">
-				View projects <ArrowRight size={16} />
+				Se projekt <ArrowRight size={16} />
 			</Button>
 			<Button href="/getting-started" variant="ghost">
-				Getting started
+				Kom igång
 			</Button>
 		</div>
 	</div>

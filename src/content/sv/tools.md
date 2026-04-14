@@ -6,24 +6,24 @@
 </script>
 
 <PageSection>
-	<h1 class="mb-4 text-4xl font-bold text-brand-navy">Tools</h1>
+	<h1 class="mb-4 text-4xl font-bold text-brand-navy">Verktyg</h1>
 	<p class="mb-12 max-w-2xl text-lg text-text-dark/70">
-		Energy Toolkit provides two tools for energy forecasting. Both follow the same
-		design philosophy — a Python generator, a data API, and an interactive web frontend —
-		but address different questions about the energy system.
+		Energy Toolkit erbjuder två verktyg för energiprognoser. Båda följer samma
+		designfilosofi — en Python-generator, ett data-API och en interaktiv webbfrontend —
+		men hanterar olika frågor om energisystemet.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2">
 		<FeatureCard
 			icon="⚡"
 			title="Demand"
-			description="How much electricity will we need? Scenario-based demand projections from historical data, with interactive charts and geographic maps."
+			description="Hur mycket el kommer vi att behöva? Scenariebaserade efterfrågeprognoser från historiska data, med interaktiva diagram och geografiska kartor."
 			href="/tools/demand"
 		/>
 		<FeatureCard
 			icon="🌱"
 			title="Generation"
-			description="What do we need to build? PyPSA-based optimization to plan renewable capacity — solar, wind, storage — with weather-informed modeling."
+			description="Vad behöver vi bygga? PyPSA-baserad optimering för att planera förnybar kapacitet — sol, vind, lagring — med väderinformerad modellering."
 			href="/tools/generation"
 		/>
 	</div>
@@ -31,41 +31,42 @@
 
 <!-- Shared architecture -->
 <PageSection bg="bg-white">
-	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Shared design philosophy</h2>
+	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Gemensam designfilosofi</h2>
 	<p class="mb-8 max-w-3xl text-text-dark/70">
-		Both tools are built around the same three-layer architecture. This isn't incidental —
-		it's a deliberate design choice that makes each tool independently forkable, deployable,
-		and customizable while sharing a common mental model.
+		Båda verktygen är byggda kring samma trelagers-arkitektur. Detta är inte
+		tillfälligt — det är ett medvetet designval som gör varje verktyg oberoende
+		forkbart, driftsättningsbart och anpassningsbart samtidigt som de delar en gemensam
+		mental modell.
 	</p>
 
 	<div class="grid gap-8 md:grid-cols-3">
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
 			<h3 class="mb-2 font-display font-bold text-brand-navy">Generator</h3>
 			<p class="mb-3 text-sm text-text-dark/70">
-				A Python engine that takes input data and configuration, runs a model, and produces
-				structured output. The generator is the only part that needs domain expertise.
+				En Python-motor som tar in indata och konfiguration, kör en modell, och producerar
+				strukturerad output. Generatorn är den enda delen som kräver domänexpertis.
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
-				<li><strong>Demand:</strong> Historical data + transformations → Parquet</li>
-				<li><strong>Generation:</strong> Weather + demand + PyPSA → capacity plans</li>
+				<li><strong>Demand:</strong> Historisk data + transformeringar → Parquet</li>
+				<li><strong>Generation:</strong> Väder + efterfrågan + PyPSA → kapacitetsplaner</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
 			<h3 class="mb-2 font-display font-bold text-brand-navy">API</h3>
 			<p class="mb-3 text-sm text-text-dark/70">
-				A data layer that serves generator output through standardized endpoints.
-				Static JSON for metadata, dynamic queries for time series and scenario data.
+				Ett datalager som serverar generatoroutput genom standardiserade endpoints.
+				Statisk JSON för metadata, dynamiska frågor för tidsserier och scenariodata.
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
-				<li><strong>Demand:</strong> OpenAPI 3.1 + DuckDB on Parquet</li>
-				<li><strong>Generation:</strong> File-based API (local, S3, or server)</li>
+				<li><strong>Demand:</strong> OpenAPI 3.1 + DuckDB på Parquet</li>
+				<li><strong>Generation:</strong> Filbaserat API (lokalt, S3 eller server)</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
 			<h3 class="mb-2 font-display font-bold text-brand-navy">Frontend</h3>
 			<p class="mb-3 text-sm text-text-dark/70">
-				An interactive web application for exploring the data. Charts, maps, scenario
-				comparison — designed for multiple audiences from the public to domain experts.
+				En interaktiv webbapplikation för att utforska data. Diagram, kartor,
+				scenariojämförelse — designad för flera målgrupper från allmänhet till domänexperter.
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
 				<li><strong>Demand:</strong> SvelteKit + LayerChart + Mapbox GL</li>
@@ -77,44 +78,44 @@
 
 <!-- Flexibility -->
 <PageSection>
-	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Designed to be forked</h2>
+	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Designade för att forkas</h2>
 	<p class="mb-8 max-w-3xl text-text-dark/70">
-		The tools are not SaaS products — they're starting points. Fork a repo, swap in your
-		own data and models, and deploy. The architecture is designed to make this straightforward.
+		Verktygen är inte SaaS-produkter — de är startpunkter. Forka ett repository, byt in
+		dina egna data och modeller, och driftsätt. Arkitekturen är designad för att göra detta enkelt.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2">
 		<div>
-			<h3 class="mb-3 font-display font-bold text-brand-navy">Flexible inputs</h3>
+			<h3 class="mb-3 font-display font-bold text-brand-navy">Flexibel indata</h3>
 			<ul class="space-y-3 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Any region</strong> — Provide your own GeoJSON boundaries and demand data. The Demand tool ships with Swedish data; adapt it for your country or region.</span>
+					<span><strong>Valfri region</strong> — Tillhandahåll dina egna GeoJSON-gränser och efterfrågedata. Demand-verktyget levereras med svenska data; anpassa det för ditt land eller din region.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Any scenario model</strong> — The generators are modular. Replace the transformation functions with your own forecasting models while keeping the data pipeline intact.</span>
+					<span><strong>Valfri scenariomodell</strong> — Generatorerna är modulära. Ersätt transformeringsfunktionerna med dina egna prognosmodeller utan att störa datapipelinen.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Configuration-driven</strong> — Scenarios, geographies, segments, and parameters are defined in config files (YAML or JSON). Change the config, regenerate, and the entire stack updates.</span>
+					<span><strong>Konfigurationsdriven</strong> — Scenarier, geografier, segment och parametrar definieras i konfigurationsfiler (YAML eller JSON). Ändra konfigurationen, regenerera, och hela stacken uppdateras.</span>
 				</li>
 			</ul>
 		</div>
 		<div>
-			<h3 class="mb-3 font-display font-bold text-brand-navy">Flexible deployment</h3>
+			<h3 class="mb-3 font-display font-bold text-brand-navy">Flexibel driftsättning</h3>
 			<ul class="space-y-3 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Run locally</strong> — Both tools work on a laptop with no cloud services. Good for development and internal use.</span>
+					<span><strong>Kör lokalt</strong> — Båda verktygen fungerar på en laptop utan molntjänster. Bra för utveckling och intern användning.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Deploy to AWS</strong> — The Demand tool includes infrastructure scripts and CI/CD for S3 + CloudFront (frontend) and App Runner (API) at ~$26/month.</span>
+					<span><strong>Driftsätt till AWS</strong> — Demand-verktyget innehåller infrastrukturskript och CI/CD för S3 + CloudFront (frontend) och App Runner (API) för ~$26/månad.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Static or dynamic</strong> — Frontends generate static sites for cheap hosting. APIs can run as containers or serve pre-built files from S3.</span>
+					<span><strong>Statisk eller dynamisk</strong> — Frontends genererar statiska webbplatser för billig hosting. API:er kan köras som containrar eller servera förbyggda filer från S3.</span>
 				</li>
 			</ul>
 		</div>
@@ -123,10 +124,10 @@
 
 <!-- Maturity -->
 <PageSection bg="bg-white">
-	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Maturity</h2>
+	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Mognadsgrad</h2>
 	<p class="mb-8 max-w-3xl text-text-dark/70">
-		The two tools are at different stages of development. Both are functional and deployed,
-		but the Demand tool has a more mature framework architecture.
+		De två verktygen är i olika utvecklingsstadier. Båda är funktionella och driftsatta,
+		men Demand-verktyget har en mer mogen ramverksarkitektur.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2">
@@ -136,12 +137,12 @@
 				<h3 class="font-display font-bold text-brand-navy">Demand</h3>
 			</div>
 			<ul class="space-y-2 text-sm text-text-dark/70">
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Full-stack framework with clear separation</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Comprehensive test coverage (60+ tests)</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> CI/CD pipeline with GitHub Actions</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Infrastructure-as-code for AWS deployment</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Documentation, coding standards, debugging guides</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Multi-language support (Paraglide i18n)</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Full-stack-ramverk med tydlig separation</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Omfattande testtäckning (60+ tester)</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> CI/CD-pipeline med GitHub Actions</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Infrastructure-as-code för AWS-driftsättning</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Dokumentation, kodstandarder, felsökningsguider</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Flerspråksstöd (Paraglide i18n)</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
@@ -150,19 +151,19 @@
 				<h3 class="font-display font-bold text-brand-navy">Generation</h3>
 			</div>
 			<ul class="space-y-2 text-sm text-text-dark/70">
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Working generator with PyPSA optimization</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Streamlit dashboard with scenario controls</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Multi-deployment API (local, S3, server)</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Docker deployment support</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planned: SvelteKit frontend migration</span></li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planned: Enhanced documentation</span></li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Fungerande generator med PyPSA-optimering</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Streamlit-dashboard med scenariokontroller</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> API för flera driftsättningslägen (lokalt, S3, server)</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Docker-driftsättningsstöd</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planerat: migration till SvelteKit-frontend</span></li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planerat: utökad dokumentation</span></li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="mt-10 text-center">
 		<Button href="/projects" variant="primary">
-			View live projects <ArrowRight size={16} />
+			Se live-projekt <ArrowRight size={16} />
 		</Button>
 	</div>
 </PageSection>

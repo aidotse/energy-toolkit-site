@@ -52,9 +52,9 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="framework" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_framework()}</h2>
 		<p class="mb-6 max-w-2xl text-text-dark/70">
-			A reusable framework for the Generation tool is on the roadmap but not yet funded.
-			PyPSA-VGR currently exists as a full implementation — the code is open source and can
-			be cloned directly.
+			Ett återanvändbart ramverk för Generation-verktyget finns på färdplanen men är ännu inte
+			finansierat. PyPSA-VGR finns för närvarande som en fullständig implementation — koden är
+			öppen källkod och kan klonas direkt.
 		</p>
 		<FrameworkCard {framework} />
 	</div>
@@ -73,100 +73,101 @@
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Generator</h3>
 		<p class="mb-4 text-text-dark/70">
-			The generator uses PyPSA (Python for Power System Analysis) to find the optimal renewable
-			capacity mix. Given a demand profile, weather data, and technology cost assumptions, it
-			determines how much solar, wind, battery storage, and hydrogen capacity is needed to meet
-			demand under different self-sufficiency targets.
+			Generatorn använder PyPSA (Python for Power System Analysis) för att hitta den optimala
+			mixen av förnybar kapacitet. Givet en efterfrågeprofil, väderdata och antaganden om
+			teknikkostnader, bestämmer den hur mycket sol, vind, batterilagring och vätgaskapacitet
+			som behövs för att möta efterfrågan under olika självförsörjningsgrader.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">PyPSA optimization</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">PyPSA-optimering</h4>
 				<p class="text-xs text-text-dark/60">
-					Builds a power system network with buses for load, renewables, battery, hydrogen,
-					and turbines. Links model charge/discharge, electrolysis, and gas turbines.
-					Optimizes for minimum cost subject to self-sufficiency and biogas constraints.
+					Bygger ett kraftsystemsnätverk med bussar för last, förnybara, batteri, vätgas,
+					och turbiner. Länkar modellerar ladda/ladda ur, elektrolys, och gasturbiner.
+					Optimerar för minimal kostnad med hänsyn till självförsörjningsgrad och biogasbegränsningar.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Weather-informed capacity factors</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Väderinformerade kapacitetsfaktorer</h4>
 				<p class="text-xs text-text-dark/60">
-					Uses ERA5 reanalysis data at 3-hour resolution to compute solar and wind capacity
-					factors. Atlite handles land-cover exclusions using CORINE classification for
-					realistic available area estimates.
+					Använder ERA5-reanalysdata med 3-timmarsupplösning för att beräkna kapacitetsfaktorer
+					för sol och vind. Atlite hanterar markanvändnings-exkluderingar med CORINE-klassificering
+					för realistiska uppskattningar av tillgängliga ytor.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Multi-scenario exploration</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Flerscenarioutforskning</h4>
 				<p class="text-xs text-text-dark/60">
-					Configuration defines a scenario space across self-sufficiency targets (50–100%),
-					energy demand variations (-20% to +20%), hydrogen options, offshore wind toggles,
-					and biogas limits. The generator validates and runs all combinations.
+					Konfigurationen definierar ett scenarioutrymme över självförsörjningsmål (50–100%),
+					variationer i energibehov (-20% till +20%), vätgasalternativ, växlingar för havsbaserad vind,
+					och biogasbegränsningar. Generatorn validerar och kör alla kombinationer.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Technology cost modeling</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Modellering av teknikkostnader</h4>
 				<p class="text-xs text-text-dark/60">
-					Comprehensive cost assumptions from 2020–2050 with multi-currency support (EUR, USD, SEK),
-					present value calculations, and technology learning curves. Covers solar, onshore/offshore
-					wind, battery, hydrogen electrolysis, nuclear, and biogas.
+					Omfattande kostnadsantaganden från 2020–2050 med stöd för flera valutor (EUR, USD, SEK),
+					nuvärdesberäkningar och tekniklärokurvor. Täcker sol, vind på land/havs, batteri,
+					vätgaselektrolys, kärnkraft och biogas.
 				</p>
 			</div>
 		</div>
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">API</h3>
 		<p class="mb-6 text-text-dark/70">
-			The API layer supports three deployment modes through a unified interface: local filesystem
-			access for development, AWS S3 via boto3 for production, and profile-based S3 for staging.
-			This means the same dashboard code works whether you're running locally or deployed to the cloud.
+			API-lagret stödjer tre driftsättningslägen genom ett enhetligt gränssnitt: åtkomst till
+			lokalt filsystem för utveckling, AWS S3 via boto3 för produktion, och profilbaserad S3
+			för staging. Detta innebär att samma dashboard-kod fungerar oavsett om du kör lokalt eller
+			driftsatt i molnet.
 		</p>
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Frontend (Dashboard)</h3>
 		<p class="mb-4 text-text-dark/70">
-			A Streamlit application with interactive scenario controls and energy system visualizations.
-			Designed for three audience levels.
+			En Streamlit-applikation med interaktiva scenariokontroller och visualiseringar av
+			energisystem. Designad för tre målgruppsnivåer.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-3">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Scenario explorer</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Scenarioutforskare</h4>
 				<p class="text-xs text-text-dark/60">
-					Slider controls for self-sufficiency targets and energy scenarios. Toggle hydrogen,
-					offshore wind, and biogas limits. Bookmarkable URLs preserve parameter state.
+					Reglagekontroller för självförsörjningsmål och energiscenarier. Växla vätgas,
+					havsbaserad vind och biogasbegränsningar. Bokmärkbara URL:er bevarar parameterstate.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Capacity & cost analysis</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Kapacitets- och kostnadsanalys</h4>
 				<p class="text-xs text-text-dark/60">
-					Energy metric cards showing capacity per technology. Stacked bar charts for
-					generation mix at weekly resolution. LCOE breakdown by energy source.
-					Performance metrics showing met/unmet demand.
+					Energi-metrikkort som visar kapacitet per teknik. Staplade stapeldiagram för
+					produktionsmix per vecka. LCOE-uppdelning per energikälla.
+					Prestandamätningar som visar täckt/otäckt behov.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Geographic context</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Geografisk kontext</h4>
 				<p class="text-xs text-text-dark/60">
-					Interactive map with Folium for regional selection. Land use comparison
-					showing physical footprint of renewable installations relative to municipal areas.
+					Interaktiv karta med Folium för regionval. Markanvändningsjämförelse som visar
+					de fysiska avtrycket av förnybara installationer relativt kommunala ytor.
 				</p>
 			</div>
 		</div>
 
-		<h3 class="mb-4 text-xl font-bold text-brand-navy">Technology stack</h3>
+		<h3 class="mb-4 text-xl font-bold text-brand-navy">Teknikstack</h3>
 		<div class="grid gap-4 md:grid-cols-3">
 			<div>
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">Generator</h4>
 				<ul class="space-y-1 text-xs text-text-dark/60">
 					<li>Python 3.8+, PyPSA ≥0.28</li>
-					<li>Atlite (renewable resources)</li>
+					<li>Atlite (förnybara resurser)</li>
 					<li>Pandas, NumPy, GeoPandas</li>
-					<li>CBC/GLPK/HiGHS solvers</li>
+					<li>CBC/GLPK/HiGHS-lösare</li>
 				</ul>
 			</div>
 			<div>
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">API</h4>
 				<ul class="space-y-1 text-xs text-text-dark/60">
-					<li>File-based (local or S3)</li>
-					<li>boto3 for AWS integration</li>
-					<li>CSV + JSON output formats</li>
+					<li>Filbaserat (lokalt eller S3)</li>
+					<li>boto3 för AWS-integration</li>
+					<li>CSV + JSON som outputformat</li>
 				</ul>
 			</div>
 			<div>
@@ -174,8 +175,8 @@
 				<ul class="space-y-1 text-xs text-text-dark/60">
 					<li>Streamlit 1.38</li>
 					<li>Plotly, Altair</li>
-					<li>Folium (maps)</li>
-					<li>Bilingual (Swedish/English)</li>
+					<li>Folium (kartor)</li>
+					<li>Tvåspråkig (svenska/engelska)</li>
 				</ul>
 			</div>
 		</div>
@@ -187,8 +188,8 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="reference" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_reference()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			Technical reference for implementers. Expand the section below for model internals,
-			scenario configuration, input data structure, and deployment details.
+			Teknisk referens för implementatörer. Expandera avsnittet nedan för modellinterna delar,
+			scenariokonfiguration, indatastruktur och driftsättningsdetaljer.
 		</p>
 
 		<details class="group rounded-xl border border-brand-teal/10 bg-brand-cream/30 open:bg-white">
@@ -199,121 +200,121 @@
 				</span>
 			</summary>
 			<div class="prose prose-lg max-w-none px-6 pb-6 prose-headings:font-display prose-headings:text-brand-navy prose-a:text-link">
-				<h3>Project structure</h3>
+				<h3>Projektstruktur</h3>
 				<pre><code>{projectStructure}</code></pre>
 
-				<h3>Generator pipeline</h3>
-				<p>The generator runs a sequential pipeline for each scenario combination:</p>
+				<h3>Generator-pipeline</h3>
+				<p>Generatorn kör en sekventiell pipeline för varje scenariokombination:</p>
 				<ol>
-					<li><strong>Validation</strong> — Checks geographic functions, weather/renewables files exist</li>
-					<li><strong>Input generation</strong> — Creates parameters, demand profiles, network specifications</li>
-					<li><strong>Optimization</strong> — Runs PyPSA model, generates statistics</li>
-					<li><strong>Output</strong> — Produces results and addon results (CSV/NetCDF)</li>
-					<li><strong>Cleanup</strong> — Optional removal of temporary files</li>
+					<li><strong>Validering</strong> — Kontrollerar att geografiska funktioner och väder-/förnybarhetsfiler finns</li>
+					<li><strong>Indata-generering</strong> — Skapar parametrar, efterfrågeprofiler och nätverksspecifikationer</li>
+					<li><strong>Optimering</strong> — Kör PyPSA-modellen, genererar statistik</li>
+					<li><strong>Output</strong> — Producerar resultat och tilläggsresultat (CSV/NetCDF)</li>
+					<li><strong>Rensning</strong> — Valfri borttagning av temporära filer</li>
 				</ol>
 
-				<h4>Scenario configuration</h4>
-				<p>Scenarios are defined in JSON configuration files with these parameters:</p>
+				<h4>Scenariokonfiguration</h4>
+				<p>Scenarier definieras i JSON-konfigurationsfiler med följande parametrar:</p>
 				<table>
-					<thead><tr><th>Parameter</th><th>Range</th><th>Description</th></tr></thead>
+					<thead><tr><th>Parameter</th><th>Intervall</th><th>Beskrivning</th></tr></thead>
 					<tbody>
-						<tr><td>Self-sufficiency</td><td>50–100% (11 levels)</td><td>Target for local generation vs imports</td></tr>
-						<tr><td>Energy scenario</td><td>-20% to +20% (3 levels)</td><td>Demand variation from base projection</td></tr>
-						<tr><td>Hydrogen</td><td>on/off</td><td>Include hydrogen electrolysis and storage</td></tr>
-						<tr><td>Offshore wind</td><td>on/off</td><td>Include offshore wind capacity</td></tr>
-						<tr><td>Biogas limit</td><td>0%, 25%, 50%, 100%</td><td>Maximum biogas share of total demand</td></tr>
+						<tr><td>Självförsörjning</td><td>50–100% (11 nivåer)</td><td>Mål för lokal produktion mot import</td></tr>
+						<tr><td>Energiscenario</td><td>-20% till +20% (3 nivåer)</td><td>Efterfrågevariation från basprognos</td></tr>
+						<tr><td>Vätgas</td><td>på/av</td><td>Inkludera vätgaselektrolys och lagring</td></tr>
+						<tr><td>Havsbaserad vind</td><td>på/av</td><td>Inkludera havsbaserad vindkapacitet</td></tr>
+						<tr><td>Biogasgräns</td><td>0%, 25%, 50%, 100%</td><td>Maximal biogasandel av total efterfrågan</td></tr>
 					</tbody>
 				</table>
-				<p>The generator validates scenario counts (warns &gt;10,000, blocks &gt;50,000) before execution.</p>
+				<p>Generatorn validerar antal scenarier (varnar &gt;10 000, blockerar &gt;50 000) innan körning.</p>
 
-				<h3>PyPSA network model</h3>
-				<h4>Buses</h4>
+				<h3>PyPSA-nätverksmodell</h3>
+				<h4>Bussar</h4>
 				<ul>
-					<li><strong>Load bus</strong> — Where demand is served</li>
-					<li><strong>Renewable bus</strong> — Solar and wind generation</li>
-					<li><strong>Battery bus</strong> — Battery storage</li>
-					<li><strong>Hydrogen bus</strong> — Hydrogen electrolysis and storage</li>
-					<li><strong>Turbine bus</strong> — Gas turbines</li>
+					<li><strong>Lastbuss</strong> — Där efterfrågan betjänas</li>
+					<li><strong>Förnybarhetsbuss</strong> — Sol- och vindproduktion</li>
+					<li><strong>Batteribuss</strong> — Batterilagring</li>
+					<li><strong>Vätgasbuss</strong> — Vätgaselektrolys och lagring</li>
+					<li><strong>Turbinbuss</strong> — Gasturbiner</li>
 				</ul>
 
-				<h4>Generators</h4>
+				<h4>Generatorer</h4>
 				<ul>
-					<li>Solar PV, onshore wind, offshore wind</li>
-					<li>Biogas (market purchase)</li>
-					<li>Backstop/import at high marginal cost (900 SEK/MWh)</li>
+					<li>Solceller, landbaserad vind, havsbaserad vind</li>
+					<li>Biogas (marknadsinköp)</li>
+					<li>Backstop/import till hög marginalkostnad (900 SEK/MWh)</li>
 				</ul>
 
-				<h4>Storage</h4>
+				<h4>Lagring</h4>
 				<ul>
-					<li>Lithium-ion batteries with charge/discharge links and cycling constraints</li>
-					<li>Hydrogen electrolysis → storage → fuel cell path</li>
+					<li>Litiumjonbatterier med ladda/ladda ur-länkar och cyklingsbegränsningar</li>
+					<li>Vätgaselektrolys → lagring → bränslecells-väg</li>
 				</ul>
 
-				<h4>Constraints</h4>
+				<h4>Begränsningar</h4>
 				<ol>
-					<li><strong>Biogas constraint</strong> — Limits biogas imports to a percentage of total demand</li>
-					<li><strong>Self-sufficiency constraint</strong> — Caps energy sourced from market below self-sufficiency threshold</li>
-					<li><strong>Battery flow constraint</strong> — Enforces charge/discharge capacity symmetry</li>
+					<li><strong>Biogasbegränsning</strong> — Begränsar biogasimport till en andel av total efterfrågan</li>
+					<li><strong>Självförsörjningsbegränsning</strong> — Sätter tak för energi från marknaden under självförsörjningströskeln</li>
+					<li><strong>Batteriflödesbegränsning</strong> — Upprätthåller symmetri mellan ladda/ladda ur-kapacitet</li>
 				</ol>
 
-				<h3>Input data</h3>
-				<h4>Technology assumptions</h4>
+				<h3>Indata</h3>
+				<h4>Teknikantaganden</h4>
 				<p>
-					Comprehensive cost and performance data from 2020–2050 in
-					<code>input/assumptions.csv</code>. Key technologies and their 2020 costs:
+					Omfattande kostnads- och prestandadata från 2020–2050 i
+					<code>input/assumptions.csv</code>. Viktiga teknologier och deras 2020-kostnader:
 				</p>
 				<table>
-					<thead><tr><th>Technology</th><th>Capital Cost (2020)</th><th>Lifetime</th></tr></thead>
+					<thead><tr><th>Teknologi</th><th>Kapitalkostnad (2020)</th><th>Livslängd</th></tr></thead>
 					<tbody>
-						<tr><td>Solar PV</td><td>€560k/MW</td><td>25–40 years</td></tr>
-						<tr><td>Onshore Wind</td><td>€1.1–1.2M/MW</td><td>25–30 years</td></tr>
-						<tr><td>Offshore Wind</td><td>€2.12M/MW</td><td>25–30 years</td></tr>
-						<tr><td>Battery Storage</td><td>€246k/MWh</td><td>20–30 years</td></tr>
-						<tr><td>H2 Electrolysis</td><td>€1.3M/MWe</td><td>25 years</td></tr>
+						<tr><td>Solceller</td><td>€560k/MW</td><td>25–40 år</td></tr>
+						<tr><td>Landbaserad vind</td><td>€1,1–1,2M/MW</td><td>25–30 år</td></tr>
+						<tr><td>Havsbaserad vind</td><td>€2,12M/MW</td><td>25–30 år</td></tr>
+						<tr><td>Batterilagring</td><td>€246k/MWh</td><td>20–30 år</td></tr>
+						<tr><td>H2-elektrolys</td><td>€1,3M/MWe</td><td>25 år</td></tr>
 					</tbody>
 				</table>
 
-				<h4>Weather data</h4>
+				<h4>Väderdata</h4>
 				<ul>
-					<li><strong>Source:</strong> ERA5 reanalysis from Copernicus</li>
-					<li><strong>Resolution:</strong> 3-hour temporal, 0.125° spatial</li>
-					<li><strong>Year:</strong> 2023 baseline</li>
-					<li><strong>Processing:</strong> Atlite generates cutout objects, capacity factors, and availability matrices</li>
+					<li><strong>Källa:</strong> ERA5-reanalys från Copernicus</li>
+					<li><strong>Upplösning:</strong> 3-timmars temporal, 0,125° spatial</li>
+					<li><strong>År:</strong> 2023 som baslinje</li>
+					<li><strong>Bearbetning:</strong> Atlite genererar cutout-objekt, kapacitetsfaktorer och tillgänglighetsmatriser</li>
 				</ul>
 
-				<h4>Demand data</h4>
+				<h4>Efterfrågedata</h4>
 				<ul>
-					<li>Historical hourly demand for SE3 region, normalized to 3-hour intervals</li>
-					<li>Base demand: 19 TWh, target: 34 TWh by 2030</li>
-					<li>Regional energy percentage breakdowns for VGR municipalities</li>
+					<li>Historisk timvis efterfrågan för SE3-regionen, normaliserad till 3-timmarsintervall</li>
+					<li>Basbehov: 19 TWh, mål: 34 TWh 2030</li>
+					<li>Regional energiprocentuppdelning för VGR:s kommuner</li>
 				</ul>
 
-				<h4>Geographic data</h4>
+				<h4>Geografisk data</h4>
 				<ul>
-					<li>Swedish municipality boundaries (GeoJSON)</li>
-					<li>Land use data by municipality</li>
-					<li>VGR region: 49 municipalities in 4 sub-regions (Fyrbodal, Göteborgsregionen, Sjuhärad, Skaraborg)</li>
+					<li>Svenska kommungränser (GeoJSON)</li>
+					<li>Markanvändningsdata per kommun</li>
+					<li>VGR-regionen: 49 kommuner i 4 delregioner (Fyrbodal, Göteborgsregionen, Sjuhärad, Skaraborg)</li>
 				</ul>
 
 				<h3>Dashboard</h3>
-				<h4>Pages</h4>
+				<h4>Sidor</h4>
 				<table>
-					<thead><tr><th>Page</th><th>Content</th></tr></thead>
+					<thead><tr><th>Sida</th><th>Innehåll</th></tr></thead>
 					<tbody>
-						<tr><td>Explorer</td><td>Main scenario exploration with charts, cards, and maps</td></tr>
-						<tr><td>About</td><td>Project description (Markdown, bilingual)</td></tr>
-						<tr><td>Assumptions</td><td>Technology costs and land use data tables</td></tr>
+						<tr><td>Explorer</td><td>Huvud-scenarioutforskning med diagram, kort och kartor</td></tr>
+						<tr><td>Om</td><td>Projektbeskrivning (Markdown, tvåspråkig)</td></tr>
+						<tr><td>Antaganden</td><td>Teknikkostnader och tabeller för markanvändningsdata</td></tr>
 					</tbody>
 				</table>
 
-				<h4>API modes</h4>
-				<p>The dashboard's <code>library/api.py</code> supports three deployment modes:</p>
+				<h4>API-lägen</h4>
+				<p>Dashboardens <code>library/api.py</code> stödjer tre driftsättningslägen:</p>
 				<table>
-					<thead><tr><th>Mode</th><th>Backend</th><th>Use Case</th></tr></thead>
+					<thead><tr><th>Läge</th><th>Backend</th><th>Användning</th></tr></thead>
 					<tbody>
-						<tr><td><code>local</code></td><td>Filesystem via pathlib</td><td>Development</td></tr>
-						<tr><td><code>aws</code></td><td>S3 via boto3</td><td>Production</td></tr>
-						<tr><td><code>aws-local</code></td><td>S3 with AWS profile</td><td>Staging / local testing</td></tr>
+						<tr><td><code>local</code></td><td>Filsystem via pathlib</td><td>Utveckling</td></tr>
+						<tr><td><code>aws</code></td><td>S3 via boto3</td><td>Produktion</td></tr>
+						<tr><td><code>aws-local</code></td><td>S3 med AWS-profil</td><td>Staging / lokal test</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -326,7 +327,7 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="implementations" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_implementations()}</h2>
 		<p class="mb-8 max-w-2xl text-text-dark/70">
-			Live applications built with the Generation tool.
+			Live-applikationer byggda med Generation-verktyget.
 		</p>
 		<ImplementationGrid items={impls} />
 	</div>
@@ -337,8 +338,8 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			The Generation tool deploys as a Docker container running the Streamlit dashboard, with
-			scenario data served from S3 or local filesystem.
+			Generation-verktyget driftsätts som en Docker-container som kör Streamlit-dashboarden,
+			med scenariodata serverade från S3 eller lokalt filsystem.
 		</p>
 		<div class="mb-8 rounded-lg bg-brand-navy p-4">
 			<pre class="text-sm text-white/90"><code>{deployCode}</code></pre>

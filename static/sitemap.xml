@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+	<url>
+		<loc>https://toolkit.energy/</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/" />
+	</url>
+
+	<url>
+		<loc>https://toolkit.energy/tools</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv/tools</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools" />
+	</url>
+
+	<url>
+		<loc>https://toolkit.energy/tools/demand</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools/demand" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools/demand" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools/demand" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv/tools/demand</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools/demand" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools/demand" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools/demand" />
+	</url>
+
+	<url>
+		<loc>https://toolkit.energy/tools/generation</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools/generation" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools/generation" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools/generation" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv/tools/generation</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/tools/generation" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/tools/generation" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/tools/generation" />
+	</url>
+
+	<url>
+		<loc>https://toolkit.energy/projects</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/projects" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/projects" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/projects" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv/projects</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/projects" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/projects" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/projects" />
+	</url>
+
+	<url>
+		<loc>https://toolkit.energy/getting-started</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/getting-started" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/getting-started" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/getting-started" />
+	</url>
+	<url>
+		<loc>https://toolkit.energy/sv/getting-started</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://toolkit.energy/getting-started" />
+		<xhtml:link rel="alternate" hreflang="sv" href="https://toolkit.energy/sv/getting-started" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://toolkit.energy/getting-started" />
+	</url>
+</urlset>
