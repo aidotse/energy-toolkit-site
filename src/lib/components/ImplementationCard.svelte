@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ExternalLink, Github } from 'lucide-svelte';
+	import * as m from '$paraglide/messages';
 	import StatusBadge from './StatusBadge.svelte';
 	import type { Implementation } from '$lib/data/implementations';
 
@@ -33,7 +34,7 @@
 		</div>
 
 		<p class="mb-4 flex-1 text-sm leading-relaxed text-text-dark/70">
-			{implementation.description}
+			{implementation.description()}
 		</p>
 
 		{#if implementation.tags && implementation.tags.length > 0}
@@ -55,7 +56,7 @@
 					class="inline-flex items-center gap-1 font-medium text-brand-teal hover:text-brand-med-teal"
 				>
 					<ExternalLink size={14} />
-					Live site
+					{m.action_view_live_example()}
 				</a>
 			{/if}
 			{#if implementation.repoUrl}
@@ -66,7 +67,7 @@
 					class="inline-flex items-center gap-1 font-medium text-text-dark/60 hover:text-brand-teal"
 				>
 					<Github size={14} />
-					Source
+					{m.action_implementation_source()}
 				</a>
 			{/if}
 		</div>

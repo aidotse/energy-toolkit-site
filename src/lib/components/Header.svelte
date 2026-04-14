@@ -1,18 +1,24 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
+	import * as m from '$paraglide/messages';
+	import { i18n } from '$lib/i18n';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 
 	const navItems = [
-		{ name: 'Tools', href: '/tools' },
-		{ name: 'Getting Started', href: '/getting-started' },
-		{ name: 'Projects', href: '/projects' }
+		{ nameFn: m.nav_tools, href: '/tools' },
+		{ nameFn: m.nav_getting_started, href: '/getting-started' },
+		{ nameFn: m.nav_projects, href: '/projects' }
 	];
 
 	let mobileOpen = $state(false);
 
 	function isActive(href: string): boolean {
-		if (href === '/') return page.url.pathname === '/';
-		return page.url.pathname.startsWith(href);
+		// Compare against the canonical (locale-stripped) pathname so that
+		// /sv/tools still activates the Tools nav item.
+		const canonical = i18n.route(page.url.pathname);
+		if (href === '/') return canonical === '/';
+		return canonical.startsWith(href);
 	}
 </script>
 
@@ -31,9 +37,10 @@
 						? 'text-brand-gold'
 						: 'text-white/80 hover:text-white'}"
 				>
-					{item.name}
+					{item.nameFn()}
 				</a>
 			{/each}
+			<LanguageSwitcher />
 		</div>
 
 		<!-- Mobile toggle -->
@@ -61,9 +68,12 @@
 						: 'text-white/80'}"
 					onclick={() => (mobileOpen = false)}
 				>
-					{item.name}
+					{item.nameFn()}
 				</a>
 			{/each}
+			<div class="pt-3">
+				<LanguageSwitcher />
+			</div>
 		</div>
 	{/if}
 </header>

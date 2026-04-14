@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as m from '$paraglide/messages';
 	import type { FrameworkStatus } from '$lib/data/frameworks';
 	import type { ImplementationStatus } from '$lib/data/implementations';
 
@@ -6,13 +7,13 @@
 
 	let { status }: { status: Status } = $props();
 
-	const labels: Record<Status, string> = {
-		stable: 'Stable',
-		preview: 'Preview',
-		planned: 'Planned',
-		live: 'Live',
-		staging: 'Staging',
-		archived: 'Archived'
+	const labels: Record<Status, () => string> = {
+		stable: m.status_stable,
+		preview: m.status_preview,
+		planned: m.status_planned,
+		live: m.status_live,
+		staging: m.status_staging,
+		archived: m.status_archived
 	};
 
 	const styles: Record<Status, string> = {
@@ -26,5 +27,5 @@
 </script>
 
 <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium {styles[status]}">
-	{labels[status]}
+	{labels[status]()}
 </span>

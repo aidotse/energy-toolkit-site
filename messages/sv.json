@@ -1,0 +1,63 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+
+	"nav_tools": "Tools",
+	"nav_getting_started": "Getting Started",
+	"nav_projects": "Projects",
+
+	"footer_tagline": "Open-source tools for creating, sharing, and visualizing energy forecasts.",
+	"footer_section_tools": "Tools",
+	"footer_section_projects": "Projects & Source",
+	"footer_builtby": "Built by AI Sweden. Open source under MIT license.",
+
+	"tool_demand_name": "Demand",
+	"tool_demand_tagline": "How much electricity will we need? Scenario-based demand projections from historical data, with interactive charts and geographic maps.",
+	"tool_generation_name": "Generation",
+	"tool_generation_tagline": "What do we need to build? PyPSA-based optimization to plan renewable capacity — solar, wind, storage — with weather-informed modeling.",
+
+	"framework_demand_description": "A full-stack framework for forecasting electricity demand. Python generator, Node.js + DuckDB API, SvelteKit explorer. Fork it, swap in your data and scenarios, deploy.",
+	"framework_generation_description": "A reusable framework for the Generation tool is not yet funded. PyPSA-VGR currently exists as a standalone implementation — contact us if you are interested in funding a framework extraction.",
+	"framework_empty_hint": "No public framework repository yet. If you are interested in funding a reusable framework extraction, get in touch.",
+
+	"implementation_behovskartan_description": "Sweden's electricity demand forecast explorer. Visualizes projected demand across regions, sectors, and scenarios through 2050. Built for Energimyndigheten.",
+	"implementation_pypsavgr_description": "Renewable capacity planner for Västra Götaland. Uses PyPSA optimization to determine the solar, wind, and storage mix needed to meet future demand.",
+	"implementations_empty_primary": "No public implementations yet.",
+	"implementations_empty_secondary": "Interested in building one?",
+	"implementations_empty_cta": "Get in touch",
+
+	"status_stable": "Stable",
+	"status_preview": "Preview",
+	"status_planned": "Planned",
+	"status_live": "Live",
+	"status_staging": "Staging",
+	"status_archived": "Archived",
+
+	"action_view_live_example": "View live example",
+	"action_framework_repo": "Framework repo",
+	"action_use_this_template": "Use this template",
+	"action_view_on_github": "View on GitHub",
+	"action_get_started": "Get started",
+	"action_jump_to_reference": "Jump to reference",
+	"action_back_to_tools": "Back to Tools",
+	"action_implementation_source": "Implementation source",
+
+	"section_framework": "Framework",
+	"section_how_it_works": "How it works",
+	"section_reference": "Reference",
+	"section_implementations": "Implementations",
+	"section_deploy": "Deploy and extend",
+	"section_technical_reference": "Technical reference",
+
+	"page_home_title": "Energy Toolkit",
+	"page_home_description": "Open-source tools for creating, sharing, and visualizing energy forecasts.",
+	"page_tools_title": "Tools — Energy Toolkit",
+	"page_tools_description": "Two tools for energy forecasting: Demand and Generation. Both follow the same design philosophy — generator, API, frontend.",
+	"page_tools_demand_title": "Demand — Energy Toolkit",
+	"page_tools_demand_description": "A full-stack framework for forecasting electricity demand. Python generator, Node.js + DuckDB API, SvelteKit explorer.",
+	"page_tools_generation_title": "Generation — Energy Toolkit",
+	"page_tools_generation_description": "PyPSA-based optimization for planning renewable capacity — solar, wind, storage — with weather-informed modeling.",
+	"page_projects_title": "Projects — Energy Toolkit",
+	"page_projects_description": "Live applications built with the Energy Toolkit — across all tools.",
+	"page_getting_started_title": "Getting Started — Energy Toolkit",
+	"page_getting_started_description": "Fork a framework, point a coding agent at it, and customize it for your own region and data."
+}

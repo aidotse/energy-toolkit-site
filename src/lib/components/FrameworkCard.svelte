@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { ExternalLink, Github } from 'lucide-svelte';
+	import { Github } from 'lucide-svelte';
+	import * as m from '$paraglide/messages';
 	import StatusBadge from './StatusBadge.svelte';
 	import Button from './Button.svelte';
 	import type { Framework } from '$lib/data/frameworks';
@@ -12,19 +13,18 @@
 		<h3 class="font-mono text-base font-bold text-brand-navy">{framework.name}</h3>
 		<StatusBadge status={framework.status} />
 	</div>
-	<p class="mb-5 text-sm leading-relaxed text-text-dark/70">{framework.description}</p>
+	<p class="mb-5 text-sm leading-relaxed text-text-dark/70">{framework.description()}</p>
 
 	{#if framework.repoUrl}
 		<div class="flex flex-wrap gap-3">
 			<Button href={framework.repoUrl} variant="primary" external>
 				<Github size={14} />
-				{framework.isTemplate ? 'Use this template' : 'View on GitHub'}
+				{framework.isTemplate ? m.action_use_this_template() : m.action_view_on_github()}
 			</Button>
 		</div>
 	{:else}
 		<div class="rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-text-dark/60">
-			No public framework repository yet. If you are interested in funding a reusable framework
-			extraction, <a href="mailto:info@toolkit.energy" class="text-link hover:underline">get in touch</a>.
+			{m.framework_empty_hint()}
 		</div>
 	{/if}
 </div>

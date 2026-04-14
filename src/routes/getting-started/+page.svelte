@@ -1,13 +1,13 @@
 <script lang="ts">
 	import PageSection from '$lib/components/PageSection.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import { ArrowRight } from 'lucide-svelte';
+	import * as m from '$paraglide/messages';
 
 	let activeTool = $state<'demand' | 'generation'>('demand');
 </script>
 
 <svelte:head>
-	<title>Getting Started — Energy Toolkit</title>
+	<title>{m.page_getting_started_title()}</title>
+	<meta name="description" content={m.page_getting_started_description()} />
 </svelte:head>
 
 <PageSection>
@@ -176,8 +176,8 @@ cd explorer && npm run dev</code></pre>
 					<h2 class="text-2xl font-bold text-brand-navy">Fork and clone</h2>
 				</div>
 				<div class="ml-11 rounded-lg bg-brand-navy p-4">
-					<pre class="text-sm text-white/90"><code>git clone https://github.com/YOUR-ORG/energy-toolkit-generation.git
-cd energy-toolkit-generation</code></pre>
+					<pre class="text-sm text-white/90"><code>git clone https://github.com/viktorbengtsson/pypsa-vgr.git
+cd pypsa-vgr</code></pre>
 				</div>
 			</section>
 

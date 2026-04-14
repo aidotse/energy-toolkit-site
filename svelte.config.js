@@ -12,7 +12,10 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter({ fallback: '404.html' })
+		adapter: adapter({ fallback: '404.html' }),
+		alias: {
+			$paraglide: './src/lib/paraglide'
+		}
 	}
 };
 

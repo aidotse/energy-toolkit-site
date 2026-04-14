@@ -1,3 +1,4 @@
+import * as m from '$paraglide/messages';
 import type { ToolSlug } from './tools';
 
 export type FrameworkStatus = 'stable' | 'preview' | 'planned';
@@ -8,7 +9,7 @@ export type Framework = {
 	repoUrl: string | null;
 	isTemplate: boolean;
 	status: FrameworkStatus;
-	description: string;
+	description: () => string;
 };
 
 export const frameworks: Framework[] = [
@@ -18,8 +19,7 @@ export const frameworks: Framework[] = [
 		repoUrl: 'https://github.com/aidotse/energy-toolkit-demand',
 		isTemplate: true,
 		status: 'preview',
-		description:
-			'A full-stack framework for forecasting electricity demand. Python generator, Node.js + DuckDB API, SvelteKit explorer. Fork it, swap in your data and scenarios, deploy.'
+		description: m.framework_demand_description
 	},
 	{
 		toolSlug: 'generation',
@@ -27,8 +27,7 @@ export const frameworks: Framework[] = [
 		repoUrl: null,
 		isTemplate: false,
 		status: 'planned',
-		description:
-			'A reusable framework for the Generation tool is not yet funded. PyPSA-VGR currently exists as a standalone implementation — contact us if you are interested in funding a framework extraction.'
+		description: m.framework_generation_description
 	}
 ];
 

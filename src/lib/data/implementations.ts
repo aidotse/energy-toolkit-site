@@ -1,3 +1,4 @@
+import * as m from '$paraglide/messages';
 import type { ToolSlug } from './tools';
 
 export type ImplementationStatus = 'live' | 'staging' | 'archived';
@@ -11,7 +12,7 @@ export type Implementation = {
 	repoUrl?: string;
 	screenshot?: string;
 	status: ImplementationStatus;
-	description: string;
+	description: () => string;
 	tags?: string[];
 };
 
@@ -24,8 +25,7 @@ export const implementations: Implementation[] = [
 		liveUrl: 'https://staging.behovskartan.se',
 		repoUrl: 'https://github.com/aidotse/behovskartan',
 		status: 'staging',
-		description:
-			"Sweden's electricity demand forecast explorer. Visualizes projected demand across regions, sectors, and scenarios through 2050. Built for Energimyndigheten.",
+		description: m.implementation_behovskartan_description,
 		tags: ['SvelteKit', 'Swedish electricity', 'Energimyndigheten']
 	},
 	{
@@ -36,8 +36,7 @@ export const implementations: Implementation[] = [
 		liveUrl: 'https://vgr.toolkit.energy',
 		repoUrl: 'https://github.com/viktorbengtsson/pypsa-vgr',
 		status: 'live',
-		description:
-			'Renewable capacity planner for Västra Götaland. Uses PyPSA optimization to determine the solar, wind, and storage mix needed to meet future demand.',
+		description: m.implementation_pypsavgr_description,
 		tags: ['PyPSA', 'Streamlit', 'Västra Götaland']
 	}
 ];
