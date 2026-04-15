@@ -5,6 +5,35 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Energy Toolkit — An open framework for creating, sharing, and visualizing energy forecasts" />
+		<!--
+			First-visit locale detection. Runs synchronously in <head> before
+			any HTML parses, so a redirect here never produces a flash of
+			English content. Only applies on the root URL so direct navigation
+			to /tools/... etc. is never overridden. The language switcher
+			sets lang_preference via an onclick handler so an explicit choice
+			always wins over the automatic detection.
+		-->
+		<script>
+			(function () {
+				if (window.location.pathname !== '/') return;
+				var pref = null;
+				var cookies = document.cookie.split(';');
+				for (var i = 0; i < cookies.length; i++) {
+					var parts = cookies[i].trim().split('=');
+					if (parts[0] === 'lang_preference') { pref = parts[1]; break; }
+				}
+				if (pref === 'en') return;
+				if (pref === 'sv') { window.location.replace('/sv/'); return; }
+				var langs = navigator.languages || [navigator.language || ''];
+				for (var j = 0; j < langs.length; j++) {
+					var l = (langs[j] || '').toLowerCase();
+					if (l === 'sv' || l.indexOf('sv-') === 0) {
+						window.location.replace('/sv/');
+						return;
+					}
+				}
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

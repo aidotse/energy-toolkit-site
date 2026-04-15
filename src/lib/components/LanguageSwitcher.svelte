@@ -16,6 +16,12 @@
 		if (normalized.startsWith('/sv/')) return normalized.slice(3);
 		return normalized;
 	});
+
+	// Record the user's explicit choice synchronously before navigation so
+	// app.html's first-visit auto-detect respects it on the next load.
+	function setLangPreference(lang: 'en' | 'sv') {
+		document.cookie = `lang_preference=${lang}; path=/; max-age=31536000; samesite=lax`;
+	}
 </script>
 
 <!--
@@ -33,6 +39,7 @@
 		aria-current={currentLang === 'en' ? 'page' : undefined}
 		hreflang="en"
 		data-sveltekit-reload
+		onclick={() => setLangPreference('en')}
 	>
 		EN
 	</a>
@@ -43,6 +50,7 @@
 		aria-current={currentLang === 'sv' ? 'page' : undefined}
 		hreflang="sv"
 		data-sveltekit-reload
+		onclick={() => setLangPreference('sv')}
 	>
 		SV
 	</a>
