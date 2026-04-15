@@ -115,9 +115,9 @@
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">API</h3>
 		<p class="mb-6 text-text-dark/70">
-			The API layer supports three deployment modes through a unified interface: local filesystem
-			access for development, AWS S3 via boto3 for production, and profile-based S3 for staging.
-			This means the same dashboard code works whether you're running locally or deployed to the cloud.
+			The API layer abstracts over the storage backend through a unified interface. The same
+			dashboard code reads scenario data from the local filesystem during development or from
+			any HTTP-accessible store in production.
 		</p>
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Frontend (Dashboard)</h3>
@@ -164,8 +164,8 @@
 			<div>
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">API</h4>
 				<ul class="space-y-1 text-xs text-text-dark/60">
-					<li>File-based (local or S3)</li>
-					<li>boto3 for AWS integration</li>
+					<li>File-based (local filesystem)</li>
+					<li>Optional HTTP server backend</li>
 					<li>CSV + JSON output formats</li>
 				</ul>
 			</div>
@@ -307,15 +307,7 @@
 				</table>
 
 				<h4>API modes</h4>
-				<p>The dashboard's <code>library/api.py</code> supports three deployment modes:</p>
-				<table>
-					<thead><tr><th>Mode</th><th>Backend</th><th>Use Case</th></tr></thead>
-					<tbody>
-						<tr><td><code>local</code></td><td>Filesystem via pathlib</td><td>Development</td></tr>
-						<tr><td><code>aws</code></td><td>S3 via boto3</td><td>Production</td></tr>
-						<tr><td><code>aws-local</code></td><td>S3 with AWS profile</td><td>Staging / local testing</td></tr>
-					</tbody>
-				</table>
+				<p>The dashboard's <code>library/api.py</code> abstracts over the storage backend behind a unified interface. The local filesystem backend is used for development; the HTTP-server backend lets the dashboard read scenario data from any HTTP-accessible store in production.</p>
 			</div>
 		</details>
 	</div>
@@ -337,8 +329,9 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			The Generation tool deploys as a Docker container running the Streamlit dashboard, with
-			scenario data served from S3 or local filesystem.
+			The Generation tool deploys as a Docker container running the Streamlit dashboard. Run
+			it on any container platform; scenario data can be served from the local filesystem or
+			any HTTP-accessible store.
 		</p>
 		<div class="mb-8 rounded-lg bg-brand-navy p-4">
 			<pre class="text-sm text-white/90"><code>{deployCode}</code></pre>

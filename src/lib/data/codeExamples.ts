@@ -43,7 +43,7 @@ Generator (PyPSA)            ← Weather data + demand + optimization model
 Output (CSV/NetCDF)          ← Capacity plans, costs, generation profiles
     │
     ▼
-API (file-based)             ← Local filesystem, S3, or HTTP server
+API (file-based)             ← Local filesystem or HTTP server
     │
     ▼
 Dashboard (Streamlit)        ← Scenario exploration, capacity mix, LCOE analysis`;

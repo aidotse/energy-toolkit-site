@@ -59,7 +59,7 @@
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
 				<li><strong>Demand:</strong> OpenAPI 3.1 + DuckDB på Parquet</li>
-				<li><strong>Generation:</strong> Filbaserat API (lokalt, S3 eller server)</li>
+				<li><strong>Generation:</strong> Filbaserat API (lokalt eller HTTP-server)</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
@@ -111,11 +111,11 @@
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Driftsätt till AWS</strong> — Demand-verktyget innehåller infrastrukturskript och CI/CD för S3 + CloudFront (frontend) och App Runner (API) för ~$26/månad.</span>
+					<span><strong>Driftsätt till molnet</strong> — Båda verktygen kör på valfri standardmolnplattform. Ta med din egen infrastruktur; verktygen är fria från leverantörsberoenden.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Statisk eller dynamisk</strong> — Frontends genererar statiska webbplatser för billig hosting. API:er kan köras som containrar eller servera förbyggda filer från S3.</span>
+					<span><strong>Statisk eller dynamisk</strong> — Frontends genererar helt statiska webbplatser som kan serveras av valfri statisk host eller CDN. API:er kan köras som containrar eller servera förbyggda filer.</span>
 				</li>
 			</ul>
 		</div>
@@ -140,7 +140,6 @@
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Full-stack-ramverk med tydlig separation</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Omfattande testtäckning (60+ tester)</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> CI/CD-pipeline med GitHub Actions</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Infrastructure-as-code för AWS-driftsättning</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Dokumentation, kodstandarder, felsökningsguider</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Flerspråksstöd (Paraglide i18n)</li>
 			</ul>
@@ -153,7 +152,7 @@
 			<ul class="space-y-2 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Fungerande generator med PyPSA-optimering</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Streamlit-dashboard med scenariokontroller</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> API för flera driftsättningslägen (lokalt, S3, server)</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Flexibelt API (lokalt filsystem eller HTTP-server)</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Docker-driftsättningsstöd</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planerat: migration till SvelteKit-frontend</span></li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planerat: utökad dokumentation</span></li>

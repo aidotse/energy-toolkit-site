@@ -58,7 +58,7 @@
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
 				<li><strong>Demand:</strong> OpenAPI 3.1 + DuckDB on Parquet</li>
-				<li><strong>Generation:</strong> File-based API (local, S3, or server)</li>
+				<li><strong>Generation:</strong> File-based API (local or HTTP server)</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-brand-teal/10 bg-brand-cream/50 p-6">
@@ -110,11 +110,11 @@
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Deploy to AWS</strong> — The Demand tool includes infrastructure scripts and CI/CD for S3 + CloudFront (frontend) and App Runner (API) at ~$26/month.</span>
+					<span><strong>Deploy to the cloud</strong> — Both tools run on any standard cloud platform. Bring your own infrastructure; the tools have no vendor lock-in.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Static or dynamic</strong> — Frontends generate static sites for cheap hosting. APIs can run as containers or serve pre-built files from S3.</span>
+					<span><strong>Static or dynamic</strong> — Frontends generate fully static sites that can be served by any static host or CDN. APIs can run as containers or serve pre-built files.</span>
 				</li>
 			</ul>
 		</div>
@@ -139,7 +139,6 @@
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Full-stack framework with clear separation</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Comprehensive test coverage (60+ tests)</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> CI/CD pipeline with GitHub Actions</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Infrastructure-as-code for AWS deployment</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Documentation, coding standards, debugging guides</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Multi-language support (Paraglide i18n)</li>
 			</ul>
@@ -152,7 +151,7 @@
 			<ul class="space-y-2 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Working generator with PyPSA optimization</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Streamlit dashboard with scenario controls</li>
-				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Multi-deployment API (local, S3, server)</li>
+				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Flexible API (local filesystem or HTTP server)</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-link">&#10003;</span> Docker deployment support</li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planned: SvelteKit frontend migration</span></li>
 				<li class="flex items-start gap-2"><span class="mt-1 text-text-dark/30">&#9675;</span> <span class="text-text-dark/50">Planned: Enhanced documentation</span></li>

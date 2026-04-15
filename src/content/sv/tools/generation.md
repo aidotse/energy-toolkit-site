@@ -115,10 +115,9 @@
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">API</h3>
 		<p class="mb-6 text-text-dark/70">
-			API-lagret stödjer tre driftsättningslägen genom ett enhetligt gränssnitt: åtkomst till
-			lokalt filsystem för utveckling, AWS S3 via boto3 för produktion, och profilbaserad S3
-			för staging. Detta innebär att samma dashboard-kod fungerar oavsett om du kör lokalt eller
-			driftsatt i molnet.
+			API-lagret abstraherar över lagringsbackenden genom ett enhetligt gränssnitt. Samma
+			dashboard-kod läser scenariodata från lokalt filsystem under utveckling eller från
+			valfri HTTP-åtkomlig lagring i produktion.
 		</p>
 
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Frontend (Dashboard)</h3>
@@ -165,8 +164,8 @@
 			<div>
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">API</h4>
 				<ul class="space-y-1 text-xs text-text-dark/60">
-					<li>Filbaserat (lokalt eller S3)</li>
-					<li>boto3 för AWS-integration</li>
+					<li>Filbaserat (lokalt filsystem)</li>
+					<li>Valfri HTTP-server-backend</li>
 					<li>CSV + JSON som outputformat</li>
 				</ul>
 			</div>
@@ -308,15 +307,7 @@
 				</table>
 
 				<h4>API-lägen</h4>
-				<p>Dashboardens <code>library/api.py</code> stödjer tre driftsättningslägen:</p>
-				<table>
-					<thead><tr><th>Läge</th><th>Backend</th><th>Användning</th></tr></thead>
-					<tbody>
-						<tr><td><code>local</code></td><td>Filsystem via pathlib</td><td>Utveckling</td></tr>
-						<tr><td><code>aws</code></td><td>S3 via boto3</td><td>Produktion</td></tr>
-						<tr><td><code>aws-local</code></td><td>S3 med AWS-profil</td><td>Staging / lokal test</td></tr>
-					</tbody>
-				</table>
+				<p>Dashboardens <code>library/api.py</code> abstraherar över lagringsbackenden bakom ett enhetligt gränssnitt. Backenden för lokalt filsystem används under utveckling; HTTP-server-backenden låter dashboarden läsa scenariodata från valfri HTTP-åtkomlig lagring i produktion.</p>
 			</div>
 		</details>
 	</div>
@@ -338,8 +329,9 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			Generation-verktyget driftsätts som en Docker-container som kör Streamlit-dashboarden,
-			med scenariodata serverade från S3 eller lokalt filsystem.
+			Generation-verktyget driftsätts som en Docker-container som kör Streamlit-dashboarden.
+			Kör det på valfri containerplattform; scenariodata kan serveras från lokalt filsystem
+			eller valfri HTTP-åtkomlig lagring.
 		</p>
 		<div class="mb-8 rounded-lg bg-brand-navy p-4">
 			<pre class="text-sm text-white/90"><code>{deployCode}</code></pre>

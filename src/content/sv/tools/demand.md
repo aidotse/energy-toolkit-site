@@ -139,7 +139,7 @@
 		<p class="mb-4 text-text-dark/70">
 			En SvelteKit-applikation som renderar prognosdata som interaktiva visualiseringar. Byggd
 			med Svelte 5 runes, Tailwind CSS, LayerChart och Mapbox GL. Genereras som en helt statisk
-			webbplats för billig hosting.
+			webbplats som kan serveras från valfri statisk host eller CDN.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-3">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
@@ -294,22 +294,23 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			De medföljande infrastrukturskripten driftsätter till AWS med GitHub Actions och OIDC-autentisering.
-			Hela stacken kör för ungefär $26/månad.
+			Stacken har två driftsättbara delar — en statisk frontend och ett API i container. Kör
+			dem på din egen infrastruktur med det moln, den containerplattform eller statiska host
+			du föredrar. Inget i ramverket är bundet till en specifik leverantör.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend → S3 + CloudFront</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend — statisk webbplats</h4>
 				<p class="text-xs text-text-dark/60">
-					Statisk webbplats synkad till S3 med CloudFront CDN. Content-hash-cache-busting för
-					assets, 1-timmes-cache för HTML. ~$1/månad.
+					Explorer byggs till ett helt statiskt paket. Driftsätt det till valfri statisk host
+					eller CDN. Content-hash-cache-busting på assets låter dig sätta långa cache-tider säkert.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">API → App Runner</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">API — Docker-container</h4>
 				<p class="text-xs text-text-dark/60">
-					Docker-container på AWS App Runner. Innehåller all Parquet-data i imagen.
-					Auto-skalning, hälsokontroller, nolltids-driftsättning. ~$25/månad.
+					API:et levereras som en Docker-container som paketerar all Parquet-data. Kör det på
+					valfri containerplattform med hälsokontroller och nolltidsuppdateringar.
 				</p>
 			</div>
 		</div>

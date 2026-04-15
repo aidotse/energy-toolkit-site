@@ -190,8 +190,8 @@ cd explorer && npm run dev</code></pre>
 				<div class="ml-11">
 					<p class="text-text-dark/80">
 						{t(
-							'The included infrastructure scripts deploy to AWS with GitHub Actions and OIDC authentication. Frontend goes to S3 + CloudFront (~$1/mo), API to App Runner (~$25/mo). See the',
-							'De medföljande infrastrukturskripten driftsätter till AWS med GitHub Actions och OIDC-autentisering. Frontend till S3 + CloudFront (~$1/mån), API till App Runner (~$25/mån). Se'
+							'The stack has two deployable pieces — a static frontend built from the Explorer, and a Docker container for the API. Run them on your own infrastructure. See the',
+							'Stacken har två driftsättbara delar — en statisk frontend byggd från Explorer, och en Docker-container för API:et. Kör dem på din egen infrastruktur. Se'
 						)}
 						<a href="/tools/demand#deploy" class="text-link hover:underline">
 							{t(
@@ -374,8 +374,8 @@ python generator/generator.py</code></pre>
 				<div class="ml-11">
 					<p class="text-text-dark/80">
 						{t(
-							'Deploy as a Docker container. The included Dockerfile runs the Streamlit app on port 8501. Host on any container service (AWS ECS, App Runner, Azure Container Apps, etc).',
-							'Driftsätt som en Docker-container. Den medföljande Dockerfile kör Streamlit-appen på port 8501. Hosta på valfri containertjänst (AWS ECS, App Runner, Azure Container Apps, etc).'
+							'Deploy as a Docker container. The included Dockerfile runs the Streamlit app on port 8501. Run it on any container platform of your choice.',
+							'Driftsätt som en Docker-container. Den medföljande Dockerfile kör Streamlit-appen på port 8501. Kör det på valfri containerplattform.'
 						)}
 					</p>
 					<div class="mt-4 rounded-lg bg-brand-navy p-4">

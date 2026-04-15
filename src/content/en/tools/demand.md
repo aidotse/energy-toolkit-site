@@ -138,8 +138,8 @@
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Frontend (Explorer)</h3>
 		<p class="mb-4 text-text-dark/70">
 			A SvelteKit application that renders forecast data as interactive visualizations. Built
-			with Svelte 5 runes, Tailwind CSS, LayerChart, and Mapbox GL. Generates as a fully static
-			site for cheap hosting.
+			with Svelte 5 runes, Tailwind CSS, LayerChart, and Mapbox GL. Generates as a fully
+			static site that can be served from any static host or CDN.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-3">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
@@ -294,22 +294,23 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			Included infrastructure scripts deploy to AWS with GitHub Actions and OIDC authentication.
-			The full stack runs at approximately $26/month.
+			The stack has two deployable pieces — a static frontend and a containerized API. Run
+			them on your own infrastructure with your preferred cloud, container platform, or static
+			host. Nothing in the framework is tied to a specific vendor.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend → S3 + CloudFront</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend — static site</h4>
 				<p class="text-xs text-text-dark/60">
-					Static site synced to S3 with CloudFront CDN. Content-hash cache busting for
-					assets, 1-hour cache for HTML. ~$1/month.
+					The Explorer builds to a fully static bundle. Deploy it to any static host or CDN.
+					Content-hash cache busting on assets lets you set long cache lifetimes safely.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">API → App Runner</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">API — Docker container</h4>
 				<p class="text-xs text-text-dark/60">
-					Docker container on AWS App Runner. Includes all Parquet data in the image.
-					Auto-scaling, health checks, zero-downtime deploys. ~$25/month.
+					The API ships as a Docker container that bundles all Parquet data. Run it on any
+					container platform with health checks and zero-downtime updates.
 				</p>
 			</div>
 		</div>
