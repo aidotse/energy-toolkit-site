@@ -246,7 +246,7 @@ cd explorer && npm run dev</code></pre>
 					</h2>
 				</div>
 				<div class="ml-11 rounded-lg bg-brand-navy p-4">
-					<pre class="text-sm text-white/90"><code>git clone https://github.com/viktorbengtsson/pypsa-vgr.git
+					<pre class="text-sm text-white/90"><code>git clone https://github.com/aidotse/pypsa-vgr.git
 cd pypsa-vgr</code></pre>
 				</div>
 			</section>

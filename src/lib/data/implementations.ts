@@ -34,7 +34,7 @@ export const implementations: Implementation[] = [
 		displayName: 'PyPSA-VGR',
 		org: 'VGR',
 		liveUrl: 'https://vgr.toolkit.energy',
-		repoUrl: 'https://github.com/viktorbengtsson/pypsa-vgr',
+		repoUrl: 'https://github.com/aidotse/pypsa-vgr',
 		status: 'live',
 		description: m.implementation_pypsavgr_description,
 		tags: ['PyPSA', 'Streamlit', 'Västra Götaland']
