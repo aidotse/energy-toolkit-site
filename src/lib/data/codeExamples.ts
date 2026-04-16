@@ -1,5 +1,5 @@
 // Multi-line code / ASCII content used inside mdsvex content files.
-// Held here so the content files can keep their <script> blocks simple —
+// Held here so the content files can keep their <script> blocks simple.
 // mdsvex's preprocessor crashes when consts with template literals live
 // directly in the content-file script block.
 

@@ -73,7 +73,7 @@
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Generator</h3>
 		<p class="mb-4 text-text-dark/70">
 			Generatorn tar historiska elbehovsdata och applicerar modulära transformeringar
-			för att skapa framtidsscenarier. Transformeringssystemet är komponerbart — bygg scenarier
+			för att skapa framtidsscenarier. Transformeringssystemet är komponerbart: bygg scenarier
 			genom att stapla funktioner som modifierar efterfrågekurvor för specifika segment och tidsperioder.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
@@ -88,7 +88,7 @@
 			<div class="rounded-lg border border-brand-teal/10 p-4">
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">Segmentgranularitet</h4>
 				<p class="text-xs text-text-dark/60">
-					Prognoser genereras per efterfrågesegment — industri, bostäder, transport,
+					Prognoser genereras per efterfrågesegment: industri, bostäder, transport,
 					tjänster, etc. Segment kan aggregeras eller visas oberoende genom API:et.
 				</p>
 			</div>
@@ -105,7 +105,7 @@
 				<p class="text-xs text-text-dark/60">
 					Allt definieras i <code class="rounded bg-white px-1 text-xs">config.yaml</code>:
 					scenarier, geografier, segment, parametrar, enheter. Ändra konfigurationen
-					och regenerera — inga kodändringar krävs.
+					och regenerera, och inga kodändringar krävs.
 				</p>
 			</div>
 		</div>
@@ -113,7 +113,7 @@
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">API</h3>
 		<p class="mb-4 text-text-dark/70">
 			Ett OpenAPI 3.1 REST-API som kombinerar förbyggda statiska endpoints med DuckDB-drivna
-			dynamiska frågor. API:et läser Parquet-filer direkt — inget ETL-steg, ingen databas att underhålla.
+			dynamiska frågor. API:et läser Parquet-filer direkt, utan ETL-steg, ingen databas att underhålla.
 		</p>
 		<div class="mb-8 overflow-x-auto">
 			<table class="w-full text-sm">
@@ -219,11 +219,11 @@
 			<div class="prose prose-lg max-w-none px-6 pb-6 prose-headings:font-display prose-headings:text-brand-navy prose-a:text-link">
 				<h3>Datapipeline</h3>
 				<ol>
-					<li><strong>Datagenerering</strong> — Generator (Python) skapar Parquet-filer i <code>/data/</code></li>
-					<li><strong>Statiska endpoints</strong> — <code>generate-api.js</code> bygger JSON-filer i <code>/data/</code></li>
-					<li><strong>API-server</strong> — Express + OpenAPI Backend serverar validerade endpoints + DuckDB-frågor</li>
-					<li><strong>Frontend-laddning</strong> — <code>+page.ts</code> hämtar initial data och skickar props till komponenter</li>
-					<li><strong>Komponentdata</strong> — Hybridmönster: komponenter accepterar props ELLER hämtar sin egen data</li>
+					<li><strong>Datagenerering</strong>: Generator (Python) skapar Parquet-filer i <code>/data/</code></li>
+					<li><strong>Statiska endpoints</strong>: <code>generate-api.js</code> bygger JSON-filer i <code>/data/</code></li>
+					<li><strong>API-server</strong>: Express + OpenAPI Backend serverar validerade endpoints + DuckDB-frågor</li>
+					<li><strong>Frontend-laddning</strong>: <code>+page.ts</code> hämtar initial data och skickar props till komponenter</li>
+					<li><strong>Komponentdata</strong>: Hybridmönster: komponenter accepterar props ELLER hämtar sin egen data</li>
 				</ol>
 
 				<h3>Statiska endpoints</h3>
@@ -242,7 +242,7 @@
 				</table>
 
 				<h3>Dynamisk endpoint</h3>
-				<p><code>GET /demand</code> — Tidsseriedata driven av DuckDB-frågor på Parquet-filer.</p>
+				<p><code>GET /demand</code>: Tidsseriedata driven av DuckDB-frågor på Parquet-filer.</p>
 				<ul>
 					<li><strong>Upplösningar:</strong> <code>1h</code>, <code>1d</code>, <code>1w</code>, <code>1M</code>, <code>1Y</code></li>
 					<li><strong>Aggregeringar:</strong> <code>sum</code>, <code>mean</code>, <code>max</code></li>
@@ -260,15 +260,15 @@
 
 				<h4>Viktiga mönster</h4>
 				<ul>
-					<li><strong>Bas vs. scenarier</strong> — Basscenarier har NULL-parameterkolumner; parametriska scenarier har värden</li>
-					<li><strong>UNION-frågor</strong> — DuckDB kombinerar bas- och parameterdata med schemanormalisering</li>
-					<li><strong>Föraggregering</strong> — Generatorn skapar aggregerade tabeller för 50–100× snabbare vanliga frågor</li>
-					<li><strong>Predicate pushdown</strong> — DuckDB pushar filter in i Parquet-skanningen för snabba frågor</li>
+					<li><strong>Bas vs. scenarier</strong>: Basscenarier har NULL-parameterkolumner; parametriska scenarier har värden</li>
+					<li><strong>UNION-frågor</strong>: DuckDB kombinerar bas- och parameterdata med schemanormalisering</li>
+					<li><strong>Föraggregering</strong>: Generatorn skapar aggregerade tabeller för 50–100× snabbare vanliga frågor</li>
+					<li><strong>Predicate pushdown</strong>: DuckDB pushar filter in i Parquet-skanningen för snabba frågor</li>
 				</ul>
 
 				<h3>Utvecklingsrutiner</h3>
 				<ul>
-					<li>Endast Svelte 5 runes — ingen Svelte 4-syntax</li>
+					<li>Endast Svelte 5 runes (ingen Svelte 4-syntax)</li>
 					<li>TypeScript genomgående med strict mode</li>
 					<li>Python följer PEP 8</li>
 					<li>Konventionella commits: <code>type(scope): description</code></li>
@@ -294,20 +294,20 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			Stacken har två driftsättbara delar — en statisk frontend och ett API i container. Kör
+			Stacken har två driftsättbara delar: en statisk frontend och ett API i container. Kör
 			dem på din egen infrastruktur med det moln, den containerplattform eller statiska host
 			du föredrar. Inget i ramverket är bundet till en specifik leverantör.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend — statisk webbplats</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend: statisk webbplats</h4>
 				<p class="text-xs text-text-dark/60">
 					Explorer byggs till ett helt statiskt paket. Driftsätt det till valfri statisk host
 					eller CDN. Content-hash-cache-busting på assets låter dig sätta långa cache-tider säkert.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">API — Docker-container</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">API: Docker-container</h4>
 				<p class="text-xs text-text-dark/60">
 					API:et levereras som en Docker-container som paketerar all Parquet-data. Kör det på
 					valfri containerplattform med hälsokontroller och nolltidsuppdateringar.

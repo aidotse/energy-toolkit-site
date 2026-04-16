@@ -76,14 +76,14 @@
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">2</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">API</h3>
-				<p class="text-sm text-text-dark/70">Ett standardiserat API som serverar genererad data. Statiska endpoints för metadata, dynamiska frågor för tidsserier — snabbt och flexibelt.</p>
+				<p class="text-sm text-text-dark/70">Ett standardiserat API som serverar genererad data. Statiska endpoints för metadata, dynamiska frågor för tidsserier, snabbt och flexibelt.</p>
 			</div>
 		</div>
 		<div class="flex gap-4">
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">3</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">Frontend</h3>
-				<p class="text-sm text-text-dark/70">En interaktiv webbapplikation för att utforska data. Diagram, kartor, scenariojämförelse och export — designad för flera målgrupper.</p>
+				<p class="text-sm text-text-dark/70">En interaktiv webbapplikation för att utforska data. Diagram, kartor, scenariojämförelse och export, designad för flera målgrupper.</p>
 			</div>
 		</div>
 	</div>

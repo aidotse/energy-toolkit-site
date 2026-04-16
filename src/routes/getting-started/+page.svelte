@@ -55,8 +55,7 @@
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>Node.js 18+</strong> —
-							{t(
+							<strong>Node.js 18+</strong>: {t(
 								'For the API and Explorer frontend',
 								'För API:et och Explorer-frontend'
 							)}
@@ -65,15 +64,13 @@
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>Python 3.9+</strong> —
-							{t('For the Generator', 'För generatorn')}
+							<strong>Python 3.9+</strong>: {t('For the Generator', 'För generatorn')}
 						</span>
 					</li>
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>DuckDB</strong> —
-							{t(
+							<strong>DuckDB</strong>: {t(
 								'Installed automatically via Node package',
 								'Installeras automatiskt via Node-paketet'
 							)}
@@ -174,7 +171,7 @@ cd api && node generate-api.js --defaults
 # Start API server (port 4010)
 npm start
 
-# In a new terminal — start Explorer (port 5173)
+# In a new terminal, start Explorer (port 5173)
 cd explorer && npm run dev</code></pre>
 					</div>
 				</div>
@@ -190,8 +187,8 @@ cd explorer && npm run dev</code></pre>
 				<div class="ml-11">
 					<p class="text-text-dark/80">
 						{t(
-							'The stack has two deployable pieces — a static frontend built from the Explorer, and a Docker container for the API. Run them on your own infrastructure. See the',
-							'Stacken har två driftsättbara delar — en statisk frontend byggd från Explorer, och en Docker-container för API:et. Kör dem på din egen infrastruktur. Se'
+							'The stack has two deployable pieces: a static frontend built from the Explorer, and a Docker container for the API. Run them on your own infrastructure. See the',
+							'Stacken har två driftsättbara delar: en statisk frontend byggd från Explorer, och en Docker-container för API:et. Kör dem på din egen infrastruktur. Se'
 						)}
 						<a href="/tools/demand#deploy" class="text-link hover:underline">
 							{t(
@@ -214,8 +211,7 @@ cd explorer && npm run dev</code></pre>
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>{t('Mamba or Conda', 'Mamba eller Conda')}</strong> —
-							{t(
+							<strong>{t('Mamba or Conda', 'Mamba eller Conda')}</strong>: {t(
 								'For Python environment management',
 								'För hantering av Python-miljöer'
 							)}
@@ -224,8 +220,7 @@ cd explorer && npm run dev</code></pre>
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>Python 3.8+</strong> —
-							{t(
+							<strong>Python 3.8+</strong>: {t(
 								'Managed through the Conda environment',
 								'Hanteras genom Conda-miljön'
 							)}
@@ -234,8 +229,7 @@ cd explorer && npm run dev</code></pre>
 					<li class="flex items-start gap-3">
 						<span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-teal"></span>
 						<span>
-							<strong>{t('A linear solver', 'En linjär lösare')}</strong> —
-							{t(
+							<strong>{t('A linear solver', 'En linjär lösare')}</strong>: {t(
 								'CBC, GLPK, or HiGHS (included in environment)',
 								'CBC, GLPK eller HiGHS (ingår i miljön)'
 							)}
@@ -267,8 +261,8 @@ cd pypsa-vgr</code></pre>
 				<div class="ml-11">
 					<p class="mb-4 text-text-dark/80">
 						{t(
-							'Create the Conda environment with all dependencies — PyPSA, Atlite, solvers, Streamlit, and geospatial libraries.',
-							'Skapa Conda-miljön med alla beroenden — PyPSA, Atlite, lösare, Streamlit och geospatiala bibliotek.'
+							'Create the Conda environment with all dependencies: PyPSA, Atlite, solvers, Streamlit, and geospatial libraries.',
+							'Skapa Conda-miljön med alla beroenden: PyPSA, Atlite, lösare, Streamlit och geospatiala bibliotek.'
 						)}
 					</p>
 					<div class="rounded-lg bg-brand-navy p-4">
@@ -288,8 +282,8 @@ mamba activate pypsa-vgr</code></pre>
 				<div class="ml-11">
 					<p class="mb-4 text-text-dark/80">
 						{t(
-							'Edit the configuration JSON to define your scenario space — financial assumptions, demand projections, technology options, and geographic scope.',
-							'Redigera konfigurations-JSON:en för att definiera ditt scenarioutrymme — finansiella antaganden, efterfrågeprognoser, teknikalternativ och geografisk omfattning.'
+							'Edit the configuration JSON to define your scenario space: financial assumptions, demand projections, technology options, and geographic scope.',
+							'Redigera konfigurations-JSON:en för att definiera ditt scenarioutrymme: finansiella antaganden, efterfrågeprognoser, teknikalternativ och geografisk omfattning.'
 						)}
 					</p>
 					<div class="rounded-lg bg-brand-navy p-4">

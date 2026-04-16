@@ -53,7 +53,7 @@
 		<h2 id="framework" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_framework()}</h2>
 		<p class="mb-6 max-w-2xl text-text-dark/70">
 			Ett återanvändbart ramverk för Generation-verktyget finns på färdplanen men är ännu inte
-			finansierat. PyPSA-VGR finns för närvarande som en fullständig implementation — koden är
+			finansierat. PyPSA-VGR finns för närvarande som en fullständig implementation. Koden är
 			öppen källkod och kan klonas direkt.
 		</p>
 		<FrameworkCard {framework} />
@@ -205,11 +205,11 @@
 				<h3>Generator-pipeline</h3>
 				<p>Generatorn kör en sekventiell pipeline för varje scenariokombination:</p>
 				<ol>
-					<li><strong>Validering</strong> — Kontrollerar att geografiska funktioner och väder-/förnybarhetsfiler finns</li>
-					<li><strong>Indata-generering</strong> — Skapar parametrar, efterfrågeprofiler och nätverksspecifikationer</li>
-					<li><strong>Optimering</strong> — Kör PyPSA-modellen, genererar statistik</li>
-					<li><strong>Output</strong> — Producerar resultat och tilläggsresultat (CSV/NetCDF)</li>
-					<li><strong>Rensning</strong> — Valfri borttagning av temporära filer</li>
+					<li><strong>Validering</strong>: Kontrollerar att geografiska funktioner och väder-/förnybarhetsfiler finns</li>
+					<li><strong>Indata-generering</strong>: Skapar parametrar, efterfrågeprofiler och nätverksspecifikationer</li>
+					<li><strong>Optimering</strong>: Kör PyPSA-modellen, genererar statistik</li>
+					<li><strong>Output</strong>: Producerar resultat och tilläggsresultat (CSV/NetCDF)</li>
+					<li><strong>Rensning</strong>: Valfri borttagning av temporära filer</li>
 				</ol>
 
 				<h4>Scenariokonfiguration</h4>
@@ -229,11 +229,11 @@
 				<h3>PyPSA-nätverksmodell</h3>
 				<h4>Bussar</h4>
 				<ul>
-					<li><strong>Lastbuss</strong> — Där efterfrågan betjänas</li>
-					<li><strong>Förnybarhetsbuss</strong> — Sol- och vindproduktion</li>
-					<li><strong>Batteribuss</strong> — Batterilagring</li>
-					<li><strong>Vätgasbuss</strong> — Vätgaselektrolys och lagring</li>
-					<li><strong>Turbinbuss</strong> — Gasturbiner</li>
+					<li><strong>Lastbuss</strong>: Där efterfrågan betjänas</li>
+					<li><strong>Förnybarhetsbuss</strong>: Sol- och vindproduktion</li>
+					<li><strong>Batteribuss</strong>: Batterilagring</li>
+					<li><strong>Vätgasbuss</strong>: Vätgaselektrolys och lagring</li>
+					<li><strong>Turbinbuss</strong>: Gasturbiner</li>
 				</ul>
 
 				<h4>Generatorer</h4>
@@ -251,9 +251,9 @@
 
 				<h4>Begränsningar</h4>
 				<ol>
-					<li><strong>Biogasbegränsning</strong> — Begränsar biogasimport till en andel av total efterfrågan</li>
-					<li><strong>Självförsörjningsbegränsning</strong> — Sätter tak för energi från marknaden under självförsörjningströskeln</li>
-					<li><strong>Batteriflödesbegränsning</strong> — Upprätthåller symmetri mellan ladda/ladda ur-kapacitet</li>
+					<li><strong>Biogasbegränsning</strong>: Begränsar biogasimport till en andel av total efterfrågan</li>
+					<li><strong>Självförsörjningsbegränsning</strong>: Sätter tak för energi från marknaden under självförsörjningströskeln</li>
+					<li><strong>Batteriflödesbegränsning</strong>: Upprätthåller symmetri mellan ladda/ladda ur-kapacitet</li>
 				</ol>
 
 				<h3>Indata</h3>

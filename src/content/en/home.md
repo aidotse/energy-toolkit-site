@@ -76,14 +76,14 @@
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">2</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">API</h3>
-				<p class="text-sm text-text-dark/70">A standardized API that serves generated data. Static endpoints for metadata, dynamic queries for time series — fast and flexible.</p>
+				<p class="text-sm text-text-dark/70">A standardized API that serves generated data. Static endpoints for metadata, dynamic queries for time series, fast and flexible.</p>
 			</div>
 		</div>
 		<div class="flex gap-4">
 			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">3</div>
 			<div>
 				<h3 class="mb-1 font-display font-bold text-brand-navy">Frontend</h3>
-				<p class="text-sm text-text-dark/70">An interactive web application for exploring the data. Charts, maps, scenario comparison, and export — designed for multiple audiences.</p>
+				<p class="text-sm text-text-dark/70">An interactive web application for exploring the data. Charts, maps, scenario comparison, and export, designed for multiple audiences.</p>
 			</div>
 		</div>
 	</div>

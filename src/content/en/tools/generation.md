@@ -53,7 +53,7 @@
 		<h2 id="framework" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_framework()}</h2>
 		<p class="mb-6 max-w-2xl text-text-dark/70">
 			A reusable framework for the Generation tool is on the roadmap but not yet funded.
-			PyPSA-VGR currently exists as a full implementation — the code is open source and can
+			PyPSA-VGR currently exists as a full implementation. The code is open source and can
 			be cloned directly.
 		</p>
 		<FrameworkCard {framework} />
@@ -205,11 +205,11 @@
 				<h3>Generator pipeline</h3>
 				<p>The generator runs a sequential pipeline for each scenario combination:</p>
 				<ol>
-					<li><strong>Validation</strong> — Checks geographic functions, weather/renewables files exist</li>
-					<li><strong>Input generation</strong> — Creates parameters, demand profiles, network specifications</li>
-					<li><strong>Optimization</strong> — Runs PyPSA model, generates statistics</li>
-					<li><strong>Output</strong> — Produces results and addon results (CSV/NetCDF)</li>
-					<li><strong>Cleanup</strong> — Optional removal of temporary files</li>
+					<li><strong>Validation</strong>: Checks geographic functions, weather/renewables files exist</li>
+					<li><strong>Input generation</strong>: Creates parameters, demand profiles, network specifications</li>
+					<li><strong>Optimization</strong>: Runs PyPSA model, generates statistics</li>
+					<li><strong>Output</strong>: Produces results and addon results (CSV/NetCDF)</li>
+					<li><strong>Cleanup</strong>: Optional removal of temporary files</li>
 				</ol>
 
 				<h4>Scenario configuration</h4>
@@ -229,11 +229,11 @@
 				<h3>PyPSA network model</h3>
 				<h4>Buses</h4>
 				<ul>
-					<li><strong>Load bus</strong> — Where demand is served</li>
-					<li><strong>Renewable bus</strong> — Solar and wind generation</li>
-					<li><strong>Battery bus</strong> — Battery storage</li>
-					<li><strong>Hydrogen bus</strong> — Hydrogen electrolysis and storage</li>
-					<li><strong>Turbine bus</strong> — Gas turbines</li>
+					<li><strong>Load bus</strong>: Where demand is served</li>
+					<li><strong>Renewable bus</strong>: Solar and wind generation</li>
+					<li><strong>Battery bus</strong>: Battery storage</li>
+					<li><strong>Hydrogen bus</strong>: Hydrogen electrolysis and storage</li>
+					<li><strong>Turbine bus</strong>: Gas turbines</li>
 				</ul>
 
 				<h4>Generators</h4>
@@ -251,9 +251,9 @@
 
 				<h4>Constraints</h4>
 				<ol>
-					<li><strong>Biogas constraint</strong> — Limits biogas imports to a percentage of total demand</li>
-					<li><strong>Self-sufficiency constraint</strong> — Caps energy sourced from market below self-sufficiency threshold</li>
-					<li><strong>Battery flow constraint</strong> — Enforces charge/discharge capacity symmetry</li>
+					<li><strong>Biogas constraint</strong>: Limits biogas imports to a percentage of total demand</li>
+					<li><strong>Self-sufficiency constraint</strong>: Caps energy sourced from market below self-sufficiency threshold</li>
+					<li><strong>Battery flow constraint</strong>: Enforces charge/discharge capacity symmetry</li>
 				</ol>
 
 				<h3>Input data</h3>

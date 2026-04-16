@@ -9,8 +9,7 @@
 	<h1 class="mb-4 text-4xl font-bold text-brand-navy">Tools</h1>
 	<p class="mb-12 max-w-2xl text-lg text-text-dark/70">
 		Energy Toolkit provides two tools for energy forecasting. Both follow the same
-		design philosophy — a Python generator, a data API, and an interactive web frontend —
-		but address different questions about the energy system.
+		design philosophy (a Python generator, a data API, and an interactive web frontend) but address different questions about the energy system.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2">
@@ -23,7 +22,7 @@
 		<FeatureCard
 			icon="🌱"
 			title="Generation"
-			description="What do we need to build? PyPSA-based optimization to plan renewable capacity — solar, wind, storage — with weather-informed modeling."
+			description="What do we need to build? PyPSA-based optimization to plan renewable capacity (solar, wind, storage) with weather-informed modeling."
 			href="/tools/generation"
 		/>
 	</div>
@@ -33,8 +32,7 @@
 <PageSection bg="bg-white">
 	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Shared design philosophy</h2>
 	<p class="mb-8 max-w-3xl text-text-dark/70">
-		Both tools are built around the same three-layer architecture. This isn't incidental —
-		it's a deliberate design choice that makes each tool independently forkable, deployable,
+		Both tools are built around the same three-layer architecture. This is a deliberate design choice that makes each tool independently forkable, deployable,
 		and customizable while sharing a common mental model.
 	</p>
 
@@ -65,7 +63,7 @@
 			<h3 class="mb-2 font-display font-bold text-brand-navy">Frontend</h3>
 			<p class="mb-3 text-sm text-text-dark/70">
 				An interactive web application for exploring the data. Charts, maps, scenario
-				comparison — designed for multiple audiences from the public to domain experts.
+				comparison, designed for multiple audiences from the public to domain experts.
 			</p>
 			<ul class="space-y-1 text-xs text-text-dark/50">
 				<li><strong>Demand:</strong> SvelteKit + LayerChart + Mapbox GL</li>
@@ -79,7 +77,7 @@
 <PageSection>
 	<h2 class="mb-4 text-2xl font-bold text-brand-navy">Designed to be forked</h2>
 	<p class="mb-8 max-w-3xl text-text-dark/70">
-		The tools are not SaaS products — they're starting points. Fork a repo, swap in your
+		The tools are not SaaS products. They are starting points. Fork a repo, swap in your
 		own data and models, and deploy. The architecture is designed to make this straightforward.
 	</p>
 
@@ -89,15 +87,15 @@
 			<ul class="space-y-3 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Any region</strong> — Provide your own GeoJSON boundaries and demand data. The Demand tool ships with Swedish data; adapt it for your country or region.</span>
+					<span><strong>Any region</strong>: Provide your own GeoJSON boundaries and demand data. The Demand tool ships with Swedish data; adapt it for your country or region.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Any scenario model</strong> — The generators are modular. Replace the transformation functions with your own forecasting models while keeping the data pipeline intact.</span>
+					<span><strong>Any scenario model</strong>: The generators are modular. Replace the transformation functions with your own forecasting models while keeping the data pipeline intact.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Configuration-driven</strong> — Scenarios, geographies, segments, and parameters are defined in config files (YAML or JSON). Change the config, regenerate, and the entire stack updates.</span>
+					<span><strong>Configuration-driven</strong>: Scenarios, geographies, segments, and parameters are defined in config files (YAML or JSON). Change the config, regenerate, and the entire stack updates.</span>
 				</li>
 			</ul>
 		</div>
@@ -106,15 +104,15 @@
 			<ul class="space-y-3 text-sm text-text-dark/70">
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Run locally</strong> — Both tools work on a laptop with no cloud services. Good for development and internal use.</span>
+					<span><strong>Run locally</strong>: Both tools work on a laptop with no cloud services. Good for development and internal use.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Deploy to the cloud</strong> — Both tools run on any standard cloud platform. Bring your own infrastructure; the tools have no vendor lock-in.</span>
+					<span><strong>Deploy to the cloud</strong>: Both tools run on any standard cloud platform. Bring your own infrastructure; the tools have no vendor lock-in.</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-teal"></span>
-					<span><strong>Static or dynamic</strong> — Frontends generate fully static sites that can be served by any static host or CDN. APIs can run as containers or serve pre-built files.</span>
+					<span><strong>Static or dynamic</strong>: Frontends generate fully static sites that can be served by any static host or CDN. APIs can run as containers or serve pre-built files.</span>
 				</li>
 			</ul>
 		</div>

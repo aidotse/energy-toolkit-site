@@ -6,7 +6,7 @@
 
 	// Compute the canonical (locale-stripped, English-slug) path. Paraglide's
 	// preprocessor wraps every <a href> in a translateAttribute() call that
-	// prepends the locale prefix based on the hreflang attribute — so both
+	// prepends the locale prefix based on the hreflang attribute, so both
 	// the EN and SV links use the SAME canonical path, and Paraglide picks
 	// the correct localized URL for each at render time.
 	const canonicalPath = $derived.by(() => {

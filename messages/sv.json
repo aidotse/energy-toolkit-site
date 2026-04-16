@@ -13,10 +13,10 @@
 	"tool_demand_name": "Demand",
 	"tool_demand_tagline": "Hur mycket el kommer vi att behöva? Scenariebaserade efterfrågeprognoser från historiska data, med interaktiva diagram och geografiska kartor.",
 	"tool_generation_name": "Generation",
-	"tool_generation_tagline": "Vad behöver vi bygga? PyPSA-baserad optimering för att planera förnybar kapacitet — sol, vind, lagring — med väderinformerad modellering.",
+	"tool_generation_tagline": "Vad behöver vi bygga? PyPSA-baserad optimering för att planera förnybar kapacitet (sol, vind, lagring) med väderinformerad modellering.",
 
 	"framework_demand_description": "Ett ramverk med full-stack för att prognostisera elbehov. Python-generator, Node.js + DuckDB API, SvelteKit-explorer. Forka det, byt in dina data och scenarier, driftsätt.",
-	"framework_generation_description": "Ett återanvändbart ramverk för Generation-verktyget är ännu inte finansierat. PyPSA-VGR finns för närvarande som en fristående implementation — kontakta oss om du är intresserad av att finansiera en ramverks-extraktion.",
+	"framework_generation_description": "Ett återanvändbart ramverk för Generation-verktyget är ännu inte finansierat. PyPSA-VGR finns för närvarande som en fristående implementation. Kontakta oss om du är intresserad av att finansiera en ramverks-extraktion.",
 	"framework_empty_hint": "Inget publikt ramverks-repository ännu. Om du är intresserad av att finansiera en återanvändbar ramverks-extraktion, hör av dig.",
 
 	"implementation_behovskartan_description": "Sveriges prognosutforskare för elbehov. Visualiserar prognostiserat behov över regioner, sektorer och scenarier fram till 2050. Byggt för Energimyndigheten.",
@@ -50,14 +50,14 @@
 
 	"page_home_title": "Energy Toolkit",
 	"page_home_description": "Öppen källkod för att skapa, dela och visualisera energiprognoser.",
-	"page_tools_title": "Verktyg — Energy Toolkit",
-	"page_tools_description": "Två verktyg för energiprognoser: Demand och Generation. Båda följer samma designfilosofi — generator, API, frontend.",
-	"page_tools_demand_title": "Demand — Energy Toolkit",
+	"page_tools_title": "Verktyg | Energy Toolkit",
+	"page_tools_description": "Två verktyg för energiprognoser: Demand och Generation. Båda följer samma designfilosofi: generator, API, frontend.",
+	"page_tools_demand_title": "Demand | Energy Toolkit",
 	"page_tools_demand_description": "Ett ramverk med full-stack för att prognostisera elbehov. Python-generator, Node.js + DuckDB API, SvelteKit-explorer.",
-	"page_tools_generation_title": "Generation — Energy Toolkit",
-	"page_tools_generation_description": "PyPSA-baserad optimering för att planera förnybar kapacitet — sol, vind, lagring — med väderinformerad modellering.",
-	"page_projects_title": "Projekt — Energy Toolkit",
-	"page_projects_description": "Live-applikationer byggda med Energy Toolkit — över alla verktyg.",
-	"page_getting_started_title": "Kom igång — Energy Toolkit",
+	"page_tools_generation_title": "Generation | Energy Toolkit",
+	"page_tools_generation_description": "PyPSA-baserad optimering för att planera förnybar kapacitet (sol, vind, lagring) med väderinformerad modellering.",
+	"page_projects_title": "Projekt | Energy Toolkit",
+	"page_projects_description": "Live-applikationer byggda med Energy Toolkit, över alla verktyg.",
+	"page_getting_started_title": "Kom igång | Energy Toolkit",
 	"page_getting_started_description": "Forka ett ramverk, rikta en kodningsagent mot det, och anpassa det för din egen region och data."
 }

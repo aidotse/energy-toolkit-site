@@ -73,7 +73,7 @@
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">Generator</h3>
 		<p class="mb-4 text-text-dark/70">
 			The generator takes historical electricity demand data and applies modular transformations
-			to create future scenarios. The transformation system is composable — build scenarios by
+			to create future scenarios. The transformation system is composable: build scenarios by
 			stacking functions that modify demand curves for specific segments and time periods.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
@@ -88,7 +88,7 @@
 			<div class="rounded-lg border border-brand-teal/10 p-4">
 				<h4 class="mb-2 text-sm font-bold text-brand-navy">Segment granularity</h4>
 				<p class="text-xs text-text-dark/60">
-					Forecasts are generated per demand segment — industry, residential, transport,
+					Forecasts are generated per demand segment: industry, residential, transport,
 					services, etc. Segments can be aggregated or viewed independently through the API.
 				</p>
 			</div>
@@ -105,7 +105,7 @@
 				<p class="text-xs text-text-dark/60">
 					Everything is defined in <code class="rounded bg-white px-1 text-xs">config.yaml</code>:
 					scenarios, geographies, segments, parameters, units. Change the config
-					and regenerate — no code changes needed.
+					and regenerate, and no code changes are needed.
 				</p>
 			</div>
 		</div>
@@ -113,7 +113,7 @@
 		<h3 class="mb-4 text-xl font-bold text-brand-navy">API</h3>
 		<p class="mb-4 text-text-dark/70">
 			An OpenAPI 3.1 REST API that combines pre-built static endpoints with DuckDB-powered
-			dynamic queries. The API reads Parquet files directly — no ETL step, no database to maintain.
+			dynamic queries. The API reads Parquet files directly, with no ETL step, no database to maintain.
 		</p>
 		<div class="mb-8 overflow-x-auto">
 			<table class="w-full text-sm">
@@ -219,11 +219,11 @@
 			<div class="prose prose-lg max-w-none px-6 pb-6 prose-headings:font-display prose-headings:text-brand-navy prose-a:text-link">
 				<h3>Data pipeline</h3>
 				<ol>
-					<li><strong>Data generation</strong> — Generator (Python) creates Parquet files in <code>/data/</code></li>
-					<li><strong>Static endpoints</strong> — <code>generate-api.js</code> builds JSON files in <code>/data/</code></li>
-					<li><strong>API server</strong> — Express + OpenAPI Backend serves validated endpoints + DuckDB queries</li>
-					<li><strong>Frontend loading</strong> — <code>+page.ts</code> fetches initial data and passes props to components</li>
-					<li><strong>Component data</strong> — Hybrid pattern: components accept props OR fetch their own data</li>
+					<li><strong>Data generation</strong>: Generator (Python) creates Parquet files in <code>/data/</code></li>
+					<li><strong>Static endpoints</strong>: <code>generate-api.js</code> builds JSON files in <code>/data/</code></li>
+					<li><strong>API server</strong>: Express + OpenAPI Backend serves validated endpoints + DuckDB queries</li>
+					<li><strong>Frontend loading</strong>: <code>+page.ts</code> fetches initial data and passes props to components</li>
+					<li><strong>Component data</strong>: Hybrid pattern: components accept props OR fetch their own data</li>
 				</ol>
 
 				<h3>Static endpoints</h3>
@@ -242,7 +242,7 @@
 				</table>
 
 				<h3>Dynamic endpoint</h3>
-				<p><code>GET /demand</code> — Time series data powered by DuckDB queries on Parquet files.</p>
+				<p><code>GET /demand</code>: Time series data powered by DuckDB queries on Parquet files.</p>
 				<ul>
 					<li><strong>Resolutions:</strong> <code>1h</code>, <code>1d</code>, <code>1w</code>, <code>1M</code>, <code>1Y</code></li>
 					<li><strong>Aggregations:</strong> <code>sum</code>, <code>mean</code>, <code>max</code></li>
@@ -260,15 +260,15 @@
 
 				<h4>Key patterns</h4>
 				<ul>
-					<li><strong>Base vs scenarios</strong> — Base scenarios have NULL parameter columns; parametric scenarios have values</li>
-					<li><strong>UNION queries</strong> — DuckDB combines base and parametric data with schema normalization</li>
-					<li><strong>Pre-aggregation</strong> — Generator creates aggregated tables for 50-100x speedup on common queries</li>
-					<li><strong>Predicate pushdown</strong> — DuckDB pushes filters into Parquet scanning for fast queries</li>
+					<li><strong>Base vs scenarios</strong>: Base scenarios have NULL parameter columns; parametric scenarios have values</li>
+					<li><strong>UNION queries</strong>: DuckDB combines base and parametric data with schema normalization</li>
+					<li><strong>Pre-aggregation</strong>: Generator creates aggregated tables for 50-100x speedup on common queries</li>
+					<li><strong>Predicate pushdown</strong>: DuckDB pushes filters into Parquet scanning for fast queries</li>
 				</ul>
 
 				<h3>Development practices</h3>
 				<ul>
-					<li>Svelte 5 runes only — no Svelte 4 syntax</li>
+					<li>Svelte 5 runes only (no Svelte 4 syntax)</li>
 					<li>TypeScript throughout with strict mode</li>
 					<li>Python follows PEP 8</li>
 					<li>Conventional commits: <code>type(scope): description</code></li>
@@ -294,20 +294,20 @@
 	<div class="mx-auto max-w-4xl">
 		<h2 id="deploy" class="mb-4 text-2xl font-bold text-brand-navy">{m.section_deploy()}</h2>
 		<p class="mb-6 text-text-dark/70">
-			The stack has two deployable pieces — a static frontend and a containerized API. Run
+			The stack has two deployable pieces: a static frontend and a containerized API. Run
 			them on your own infrastructure with your preferred cloud, container platform, or static
 			host. Nothing in the framework is tied to a specific vendor.
 		</p>
 		<div class="mb-8 grid gap-4 md:grid-cols-2">
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend — static site</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">Frontend: static site</h4>
 				<p class="text-xs text-text-dark/60">
 					The Explorer builds to a fully static bundle. Deploy it to any static host or CDN.
 					Content-hash cache busting on assets lets you set long cache lifetimes safely.
 				</p>
 			</div>
 			<div class="rounded-lg border border-brand-teal/10 p-4">
-				<h4 class="mb-2 text-sm font-bold text-brand-navy">API — Docker container</h4>
+				<h4 class="mb-2 text-sm font-bold text-brand-navy">API: Docker container</h4>
 				<p class="text-xs text-text-dark/60">
 					The API ships as a Docker container that bundles all Parquet data. Run it on any
 					container platform with health checks and zero-downtime updates.
